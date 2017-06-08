@@ -1,0 +1,37 @@
+{
+  "name": "tomtervel",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "bankai start --optimize",
+    "dev": "bankai start -da --uglify false -H [ --title 'Tomter Vel' ] -j [ --transform brfs ]",
+    "build": "bankai build -a assets -H [ --title 'Tomter Vel' ] -j [ --transform brfs ] --optimize",
+    "test": "standard && npm run deps && node test.js"
+  },
+  "main": "index.js",
+  "engine": {
+    "node": "8.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/bendik/tomtervel.git"
+  },
+  "dependencies": {
+    "beldown": "^1.1.0",
+    "choo": "^5.6.2",
+    "choo-persist": "^3.0.2",
+    "marked": "^0.3.6",
+    "sheetify": "^6.1.0",
+    "tachyons": "^4.7.4"
+  },
+  "devDependencies": {
+    "bankai": "^7.6.2",
+    "choo-log": "^6.1.2",
+    "dependency-check": "^2.8.0",
+    "brfs": "^1.4.3",
+    "standard": "^10.0.2",
+    "unassertify": "^2.0.4"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
