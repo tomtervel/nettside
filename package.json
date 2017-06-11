@@ -16,7 +16,9 @@
     "url": "git+https://gitlab.com/bendik/tomtervel.git"
   },
   "dependencies": {
+    "bankai": "^7.6.2",
     "beldown": "^1.1.0",
+    "brfs": "^1.4.3",
     "choo": "^5.6.2",
     "choo-persist": "^3.0.2",
     "marked": "^0.3.6",
@@ -24,12 +26,9 @@
     "tachyons": "^4.7.4"
   },
   "devDependencies": {
-    "bankai": "^7.6.2",
     "choo-log": "^6.1.2",
     "dependency-check": "^2.8.0",
-    "brfs": "^1.4.3",
-    "standard": "^10.0.2",
-    "unassertify": "^2.0.4"
+    "standard": "^10.0.2"
   },
   "eslintConfig": {
     "extends": "standard"
