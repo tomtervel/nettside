@@ -1,7 +1,7 @@
 var app = require('choo')()
 var html = require('choo/html')
 var persist = require('choo-persist')
-var md = require('nano-markdown')
+var md = require('marked')
 var css = require('sheetify')
 var fs = require('fs')
 
@@ -40,10 +40,10 @@ app.route('/:page', mainView)
 app.mount('div')
 
 var logoAnimation = css`
-  :host:hover #vel {
-    fill: #fbf1a9;
+  :host:hover svg #vel {
+    fill: #fbf1a9 !important;
   }
-  :host #vel {
+  :host svg #vel {
     transition: fill .2s ease;
   } 
 `
@@ -58,21 +58,26 @@ function mainView (state, emit) {
 }
 function header (state, emit) {
   return html`
-    <header class="pa4-ns pa6-l unselectable flex flex-column flex-row-ns justify-content ph2">
-      <img 
-        class="logo h4 ${logoAnimation} ${state.params.page !== 'active' && 'pointer'}"
-        ondragstart=${function () { return false }}
-        onclick=${function () { emit('pushState', '/') }}
-        src="data:image/svg+xml;base64,${btoa(String.fromCharCode.apply(null, new Uint8Array(logo)))}"
-      />
-      ${menuElement(state, emit)}
+    <header class="pa4-m pa5-l pa2 unselectable flex flex-column flex-row-ns content-stretch">
+      <h1 class="ma0 h3 h4-l">
+        <img 
+          class="logo h3 h4-l ${logoAnimation} ${state.params.page !== 'active' && 'pointer'}"
+          ondragstart=${function () { return false }}
+          onclick=${function () { emit('pushState', '/') }}
+          src="data:image/svg+xml;base64,${btoa(String.fromCharCode.apply(null, new Uint8Array(logo)))}"
+        />
+        <span class="clip">Tomter Vel</span>
+      </h1>
+      <nav class="f3-l pt2 pt0-ns flex-grow">
+        ${menuElement(state, emit)}
+      </nav>
     </header>
   `
 }
 
 function menuElement (state, emit) {
   return html`
-    <ul class="list">
+    <ul class="list ma0 flex flex-column flex-row-reverse-ns pl0 pl4-ns content-end justify-end align-center">
       ${Object.keys(state.pages).map(function (path) {
         if (path === '/') return null
         return html`
@@ -88,7 +93,7 @@ function menuElement (state, emit) {
 
 function pageContent (state, emit) {
   return html`
-    <main class="mw8 w-100 ph4-ns pb1 ph2 f3-ns" id="content">
+    <main class="mw8 w-100 ph4-ns ph5-l pb3 ph2 f3-ns" id="content">
       ${toHtml(md(state.pages['/' + state.params.page].markdown))}
     </main>
   `
@@ -96,20 +101,17 @@ function pageContent (state, emit) {
 
 function toHtml (src) {
   var el = document.createElement('div')
-  el.innerHTML = src
-  var nodes = el.childNodes
-  var els = document.createElement('div')
-  for (var i = 0; i > nodes.length; i++) {
-    els.appendChild(fmt(nodes[i]))
-  }
-
+  el.innerHTML = src.trim()
+  el.childNodes.forEach(fmt)
   return el
-  function fmt (el) {
+  function fmt (el, i) {
     var nodeName = el.nodeName.toLowerCase()
-    if (nodeName === 'h1') el.setAttribute('class', 'f-5 ttu')
-    if (nodeName === 'h2') el.setAttribute('class', 'f1 ttu')
+    if (nodeName === 'h1' && i === 1) el.setAttribute('class', 'f-5')
+    if (nodeName === 'p' && i === 2) el.setAttribute('class', 'f-4')
+    if (nodeName === 'h2') el.setAttribute('class', 'f1')
     if (nodeName === 'pre') el.setAttribute('class', 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto')
     if (nodeName === 'ul') el.setAttribute('class', 'f2 list b lh-copy')
+    if (nodeName === 'table') el.setAttribute('class', 'w-100')
     return el
   }
 }
