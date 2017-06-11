@@ -21,7 +21,7 @@
     "brfs": "^1.4.3",
     "choo": "^5.6.2",
     "choo-persist": "^3.0.2",
-    "marked": "^0.3.6",
+    "nano-markdown": "^1.2.0",
     "sheetify": "^6.1.0",
     "tachyons": "^4.7.4"
   },
