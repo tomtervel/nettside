@@ -116,6 +116,11 @@ function toHtml (src) {
 function markdownLoader (state, emitter) {
   if (!state.pages) state.pages = {}
   emitter.on('DOMContentLoaded', function () {
+    Object.keys(state.pages).filter(function (path) {
+      return !!PAGES[path]
+    }).forEach(path => {
+      delete state.pages[path]
+    })
     Object.keys(PAGES).forEach(function (path) {
       if (!state.pages[path]) state.pages[path] = PAGES[path]
       fetch('/assets/pages/' + PAGES[path].file).then(function (data) { return data.text() }).then(function (markdown) {
