@@ -73,7 +73,7 @@ function menuElement (state, emit) {
   return html`
     <ul class="list">
       ${Object.keys(state.pages).map(function (path) {
-        if (path == '/') return null
+        if (path === '/') return null
         return html`
           <li class="${path.slice(1) !== state.params.page ? 'pointer b' : 'bg-light-yellow'} pa1 hover-bg-light-yellow bg-animate"
             onclick=${function () { emit('pushState', path) }}>
@@ -117,8 +117,8 @@ function markdownLoader (state, emitter) {
   if (!state.pages) state.pages = {}
   emitter.on('DOMContentLoaded', function () {
     Object.keys(state.pages).filter(function (path) {
-      return !!PAGES[path]
-    }).forEach(path => {
+      return !PAGES[path]
+    }).forEach(function (path) {
       delete state.pages[path]
     })
     Object.keys(PAGES).forEach(function (path) {
