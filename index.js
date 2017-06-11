@@ -106,8 +106,8 @@ function toHtml (src) {
   return el
   function fmt (el, i) {
     var nodeName = el.nodeName.toLowerCase()
-    if (nodeName === 'h1' && i === 1) el.setAttribute('class', 'f-5')
-    if (nodeName === 'p' && i === 2) el.setAttribute('class', 'f-4')
+    if (nodeName === 'h1' && i === 0) el.setAttribute('class', 'f-5-ns tc')
+    if (nodeName === 'p' && i === 1) el.setAttribute('class', 'f-4')
     if (nodeName === 'h2') el.setAttribute('class', 'f1')
     if (nodeName === 'pre') el.setAttribute('class', 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto')
     if (nodeName === 'ul') el.setAttribute('class', 'f2 list b lh-copy')
