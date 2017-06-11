@@ -58,7 +58,7 @@ function mainView (state, emit) {
 }
 function header (state, emit) {
   return html`
-    <header class="pa4-m pa5-l pa2 unselectable flex flex-column flex-row-ns content-stretch">
+    <header class="pa4-m pa5-l pa2 unselectable flex flex-column flex-row-ns justify-between">
       <h1 class="ma0 h3 h4-l">
         <img 
           class="logo h3 h4-l ${logoAnimation} ${state.params.page !== 'active' && 'pointer'}"
