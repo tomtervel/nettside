@@ -68,7 +68,7 @@ function header (state, emit) {
         />
         <span class="clip">Tomter Vel</span>
       </h1>
-      <nav class="f3-l pt2 pt0-ns flex-grow">
+      <nav class="f3-l pt2 pt0-ns flex flex-column justify-center">
         ${menuElement(state, emit)}
       </nav>
     </header>
@@ -77,7 +77,7 @@ function header (state, emit) {
 
 function menuElement (state, emit) {
   return html`
-    <ul class="list ma0 flex flex-column flex-row-reverse-ns pl0 pl4-ns content-end justify-end align-center">
+    <ul class="list ma0 flex flex-column flex-row-reverse-ns pl1 pl4-ns content-end justify-center align-center">
       ${Object.keys(state.pages).map(function (path) {
         if (path === '/') return null
         return html`
