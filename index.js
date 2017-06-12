@@ -27,6 +27,9 @@ css`
   html, body {
     height: 100%;
   }
+  header {
+    flex-shrink: 0;
+  }
   .unselectable {
     user-select: none;
     -moz-user-select: none;
