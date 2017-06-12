@@ -139,7 +139,7 @@ function markdownPages (pagesFolder) {
         fetch('/assets/pages/' + PAGES[path].file).then(function (data) { return data.text() }).then(function (markdown) {
           state.pages[path].markdown = markdown
           emitter.emit('log:info', 'got markdown', markdown)
-          if (path.indexOf(state.params.page) > -1) emitter.emit('render')
+          if (path.slice(1) === state.params.page) emitter.emit('render')
         }).catch(function (error) {
           emitter.emit('log:error', 'failed to fetch markdown', error)
         })
