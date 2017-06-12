@@ -37,7 +37,7 @@ css`
 
 function mainView (state, emit) {
   return html`
-    <div class='flex flex-column items-stretch h-100'>
+    <div class='flex flex-column justify-between items-center h-100'>
       ${header(state, emit)}
       ${pageContent(state, emit)}
       ${footer(state, emit)}
@@ -46,7 +46,7 @@ function mainView (state, emit) {
 }
 function header (state, emit) {
   return html`
-    <header class="mw8 center w-100 pa4-m pa5-l pa2 unselectable flex flex-column flex-row-ns justify-between">
+    <header class="mw8 w-100 pa4-m pa5-l pa2 unselectable flex flex-column flex-row-ns justify-between">
       <h1 class="ma0 h3 h4-l">
         <img 
           class="logo h3 h4-l ${state.params.page !== 'active' && 'pointer'}"
@@ -90,7 +90,7 @@ function pageContent (state, emit) {
 }
 function footer (state, emit) {
   return html`
-      <footer class="mw8 w-100 center">
+      <footer class="mw8 w-100 pv4">
         ${toHtml(md(footerMarkdown))}
       </footer>
     `
@@ -109,7 +109,7 @@ function toHtml (src) {
       if (nodeName === 'pre') el.classList.value = 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto'
       if (nodeName === 'ul') el.classList.value = 'f2 list b lh-copy'
       if (nodeName === 'table') el.classList.value = 'w-100'
-      el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8', 'center')
+      el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8')
     }
     return el
   }
