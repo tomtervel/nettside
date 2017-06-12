@@ -12,7 +12,7 @@ var footerMarkdown = fs.readFileSync(__dirname + '/assets/footer.md', 'utf-8')
 document.body.appendChild(document.createElement('div'))
 document.body.classList.add('h-100', 'bg-washed-yellow', 'black', 'sans-serif')
 
-// app.use(persist())
+app.use(persist())
 app.use(markdownPages(pagesFolder))
 app.route('/:page', mainView)
 app.mount('div')
