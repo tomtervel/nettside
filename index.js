@@ -83,7 +83,7 @@ function pageContent (state, emit) {
   var pagekey = '/' + state.params.page
   if (!state.pages[pagekey]) return null
   return html`
-    <main class="self-stretch w-100 pb3 f3-ns" id="content">
+    <main class="w-100 pb3 f3-ns flex flex-column" id="content">
       ${toHtml(md(state.pages[pagekey].markdown))}
     </main>
   `
