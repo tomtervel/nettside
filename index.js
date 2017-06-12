@@ -88,6 +88,7 @@ function pageContent (state, emit) {
     </main>
   `
 }
+
 function footer (state, emit) {
   return html`
       <footer class="mw8 w-100 pv4">
@@ -95,6 +96,7 @@ function footer (state, emit) {
       </footer>
     `
 }
+
 function toHtml (src) {
   var el = document.createElement('div')
   el.innerHTML = src.trim()
@@ -121,10 +123,8 @@ function markdownPages (pagesFolder) {
     if (!state.pages) state.pages = {}
 
     emitter.on('DOMContentLoaded', function () {
-      // List of static pages
-
       // Populate an object map of urls with titlecasing, filename and markdown keys
-      var PAGES = pagesFolder.reduce(function (acc, page) {
+      var pages = pagesFolder.reduce(function (acc, page) {
         var path = page !== 'index.md' ? '/' + page.slice(0, page.indexOf('.md')) : '/'
         acc[path] = { file: page, markdown: '', title: toProperCase(page.slice(0, page.indexOf('.md'))) }
         return acc
@@ -132,15 +132,15 @@ function markdownPages (pagesFolder) {
 
       // If there are any pages that's been removed, remove them from potential persistant state
       Object.keys(state.pages).filter(function (path) {
-        return !PAGES[path]
+        return !pages[path]
       }).forEach(function (path) {
         delete state.pages[path]
       })
 
-      // Populate state with new pages and updated markdown
-      Object.keys(PAGES).forEach(function (path) {
-        if (!state.pages[path]) state.pages[path] = PAGES[path]
-        fetch('/assets/pages/' + PAGES[path].file).then(function (data) { return data.text() }).then(function (markdown) {
+      // Populate state with new pages and update markdown markdown
+      Object.keys(pages).forEach(function (path) {
+        if (!state.pages[path]) state.pages[path] = pages[path]
+        fetch('/assets/pages/' + pages[path].file).then(function (data) { return data.text() }).then(function (markdown) {
           state.pages[path].markdown = markdown
           emitter.emit('log:info', 'got markdown', markdown)
           if (path.slice(1) === state.params.page) emitter.emit('render')
