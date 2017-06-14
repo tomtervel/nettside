@@ -27,7 +27,7 @@ css`
   html, body {
     height: 100%;
   }
-  header {
+  header, main, footer {
     flex-shrink: 0;
   }
   .unselectable {
@@ -100,21 +100,21 @@ function footer (state, emit) {
 function toHtml (src) {
   var el = document.createElement('div')
   el.innerHTML = src.trim()
-  el.childNodes.forEach(fmt)
+  el.childNodes.forEach(formatMarkdown)
   el.classList.value = 'items-center flex flex-column'
   return el
-  function fmt (el, i) {
-    if (el.classList !== undefined) {
-      var nodeName = el.nodeName.toLowerCase()
-      if (nodeName === 'h1' && i === 0) el.classList.value = 'f-5-ns tc'
-      if (nodeName === 'p' && i === 1) el.classList.value = 'f-4'
-      if (nodeName === 'h2') el.classList.value = 'f1'
-      if (nodeName === 'pre') el.classList.value = 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto'
-      if (nodeName === 'ul') el.classList.value = 'f2 list b lh-copy'
-      if (nodeName === 'table') el.classList.value = 'w-100'
-      el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8', 'w-100')
-    }
-    return el
+}
+
+function formatMarkdown (el, i) {
+  if (el.classList !== undefined) {
+    var nodeName = el.nodeName.toLowerCase()
+    if (nodeName === 'h1' && i === 0) el.classList.value = 'f-5-ns tc'
+    if (nodeName === 'p' && i === 1) el.classList.value = 'f-4'
+    if (nodeName === 'h2') el.classList.value = 'f1'
+    if (nodeName === 'pre') el.classList.value = 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto'
+    if (nodeName === 'ul') el.classList.value = 'f2 list b lh-copy'
+    if (nodeName === 'table') el.classList.value = 'w-100'
+    el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8', 'w-100')
   }
 }
 

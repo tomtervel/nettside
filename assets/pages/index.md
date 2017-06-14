@@ -1,3 +1,3 @@
 # Velkommen!
 
-Her kommer det oppdateringer!
+Her kommer det oppdateringer…
