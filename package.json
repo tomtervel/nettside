@@ -4,7 +4,7 @@
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start --optimize",
     "dev": "bankai start -da --uglify false -H [ --title 'Tomter Vel' ] -j [ --transform brfs ]",
-    "build": "bankai build -Va assets -H [ --title 'Tomter Vel' --lang 'nb_NO' --head '<meta name=\"google-site-verification\" content=\"2nPO6HP4Sr2xq2uViZI8fmWBGleIaTz1A_JTSzze5Mg\" /><meta name=viewport content=\"width=device-width, initial-scale=1\" ></meta><script src=\"//cdn.polyfill.io/v2/polyfill.min.js\" ></script><script>(function(){ var redirect = sessionStorage.redirect; delete sessionStorage.redirect; if (redirect && redirect != location.href) { history.replaceState(null, null, redirect);}  })();</script>' ] -j [ --transform brfs ] --optimize; create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
+    "build": "bankai build -V --html [ --title 'Tomter Vel' --lang 'nb_NO' --head '<meta name=\"google-site-verification\" content=\"2nPO6HP4Sr2xq2uViZI8fmWBGleIaTz1A_JTSzze5Mg\" /><meta name=viewport content=\"width=device-width, initial-scale=1\" ></meta><script src=\"//cdn.polyfill.io/v2/polyfill.min.js\" ></script><script>(function(){ var redirect = sessionStorage.redirect; delete sessionStorage.redirect; if (redirect && redirect != location.href) { history.replaceState(null, null, redirect);}  })();</script>' ] -j [ --transform brfs ] --optimize dist; create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "bankai": "^7.6.2",
-    "beldown": "^1.1.0",
     "brfs": "^1.4.3",
     "choo": "^5.6.2",
     "choo-persist": "^3.0.2",
@@ -27,7 +26,7 @@
   },
   "devDependencies": {
     "choo-log": "^6.1.2",
-    "dependency-check": "^2.9.0",
+    "dependency-check": "^2.9.1",
     "standard": "^10.0.2"
   },
   "eslintConfig": {

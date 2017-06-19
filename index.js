@@ -9,13 +9,10 @@ var logo = fs.readFileSync(__dirname + '/assets/logo.svg')
 var pagesFolder = fs.readdirSync(__dirname + '/assets/pages')
 var footerMarkdown = fs.readFileSync(__dirname + '/assets/footer.md', 'utf-8')
 
-document.body.appendChild(document.createElement('div'))
-document.body.classList.add('h-100', 'bg-washed-yellow', 'black', 'sans-serif')
-
 app.use(persist())
 app.use(markdownPages(pagesFolder))
 app.route('/:page', mainView)
-app.mount('div')
+app.mount('body')
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-log')())
@@ -24,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 css('tachyons')
 css`
-  html, body {
+  html {
     height: 100%;
   }
   header, main, footer {
@@ -37,11 +34,11 @@ css`
 
 function mainView (state, emit) {
   return html`
-    <div class='flex flex-column justify-between items-center h-100'>
+    <body class='flex flex-column justify-between items-center h-100 bg-washed-yellow black sans-serif'>
       ${header(state, emit)}
       ${pageContent(state, emit)}
       ${footer(state, emit)}
-    </div>
+    </body>
   `
 }
 function header (state, emit) {
