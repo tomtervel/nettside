@@ -36,7 +36,7 @@ function mainView (state, emit) {
   return html`
     <body class='flex flex-column justify-between items-center h-100 bg-washed-yellow black sans-serif'>
       ${header(state, emit)}
-      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//www.openstreetmap.org/export/embed.html?bbox=10.986435413360596%2C59.65181810434527%2C11.017935276031494%2C59.66587666600541&amp;layer=transportmap" style="border: 1px solid transparent"></iframe>
+      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//www.openstreetmap.org/export/embed.html?bbox=10.986435413360596%2C59.65181810434527%2C11.017935276031494%2C59.66587666600541&amp;layer=hot" style="border: 1px solid transparent"></iframe>
       ${pageContent(state, emit)}
       ${footer(state, emit)}
     </body>
