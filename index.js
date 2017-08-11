@@ -109,7 +109,7 @@ function formatMarkdown (el, i) {
     if (nodeName === 'p' && i === 1) el.classList.value = 'f-4 lh-copy'
     if (nodeName === 'h2') el.classList.value = 'f1 lh-title'
     if (nodeName === 'pre') el.classList.value = 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto'
-    if (nodeName === 'ul') el.classList.value = 'list b lh-copy'
+    if (nodeName === 'ul') el.classList.value = 'list lh-copy'
     if (nodeName === 'table') el.classList.value = 'w-100'
     el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8', 'w-100')
   }
