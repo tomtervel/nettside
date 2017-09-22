@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/bendik/tomtervel.git"
+    "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "git+https://git@github.com/bendik/bankai#new-new-new",
+    "bankai": "git+https://git@github.com/choojs/bankai#new-new-new",
     "brfs": "^1.4.3",
     "choo": "^6.1.0",
     "choo-persist": "^3.0.2",
