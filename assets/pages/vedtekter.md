@@ -1,5 +1,5 @@
-# VEDTEKTER
-### Vedtekter av 29.03.2017
+# Vedtekter
+###### av 29.03.2017
 
 ##### § 1
 Tomter vel er upolitisk. Foreningen har som formål å virke for stedets velferd, forskjønnelse og utvikling og ellers ivareta Tomters interesser.
