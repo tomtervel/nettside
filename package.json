@@ -15,7 +15,7 @@
     "url": "git+https://gitlab.com/bendik/tomtervel.git"
   },
   "dependencies": {
-    "bankai": "git+https://git@github.com/choojs/bankai#new-new-new",
+    "bankai": "git+https://git@github.com/bendik/bankai#new-new-new",
     "brfs": "^1.4.3",
     "choo": "^6.1.0",
     "choo-persist": "^3.0.2",
@@ -24,6 +24,7 @@
     "envify": "^4.1.0",
     "mapbox-gl": "^0.40.1",
     "marked": "^0.3.6",
+    "mkdirp": "^0.5.1",
     "nanocomponent": "^6.4.2",
     "sheetify": "^6.2.0",
     "style.css": "^1.0.0-beta-1",
