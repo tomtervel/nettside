@@ -2,9 +2,8 @@
   "name": "tomtervel",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
-    "start": "bankai start --optimize",
-    "dev": "bankai start -da --uglify false -H [ --title 'Tomter Vel' ] -j [ --transform brfs ]",
-    "build": "bankai build -V --html [ --title 'Tomter Vel' --lang 'nb_NO' --head '<meta name=\"google-site-verification\" content=\"2nPO6HP4Sr2xq2uViZI8fmWBGleIaTz1A_JTSzze5Mg\" /><meta name=viewport content=\"width=device-width, initial-scale=1\" ></meta><script src=\"//cdn.polyfill.io/v2/polyfill.min.js\" ></script><script>(function(){ var redirect = sessionStorage.redirect; delete sessionStorage.redirect; if (redirect && redirect != location.href) { history.replaceState(null, null, redirect);}  })();</script>' ] -j [ --transform brfs ] --optimize dist; create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
+    "start": "bankai start",
+    "build": "bankai build",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
@@ -16,18 +15,30 @@
     "url": "git+https://gitlab.com/bendik/tomtervel.git"
   },
   "dependencies": {
-    "bankai": "^7.6.2",
+    "bankai": "git@github.com:choojs/bankai#new-new-new",
     "brfs": "^1.4.3",
-    "choo": "^5.6.2",
+    "choo": "^6.1.0",
     "choo-persist": "^3.0.2",
+    "create-html": "^4.0.0",
+    "dotenv": "^4.0.0",
+    "envify": "^4.1.0",
+    "mapbox-gl": "^0.40.1",
     "marked": "^0.3.6",
-    "sheetify": "^6.1.0",
-    "tachyons": "^4.7.4"
+    "nanocomponent": "^6.4.2",
+    "sheetify": "^6.2.0",
+    "style.css": "^1.0.0-beta-1",
+    "tachyons": "^4.8.1"
   },
   "devDependencies": {
-    "choo-log": "^6.1.2",
+    "choo-log": "^7.2.1",
     "dependency-check": "^2.9.1",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
+  },
+  "browserify": {
+    "transform": [
+      "brfs",
+      "envify"
+    ]
   },
   "eslintConfig": {
     "extends": "standard"

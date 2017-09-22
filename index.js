@@ -1,9 +1,12 @@
+require('dotenv').config()
+
 var app = require('choo')()
 var html = require('choo/html')
 var persist = require('choo-persist')
 var md = require('marked')
 var css = require('sheetify')
 var fs = require('fs')
+var MapComponent = require('./mapbox')
 
 var logo = fs.readFileSync(__dirname + '/assets/logo.svg')
 var pagesFolder = fs.readdirSync(__dirname + '/assets/pages')
@@ -19,6 +22,8 @@ if (process.env.NODE_ENV !== 'production') {
   document.body.classList.add('debug-grid-16')
 }
 
+var map = new MapComponent()
+
 css('tachyons')
 css`
   html {
@@ -31,12 +36,13 @@ css`
     user-select: none;
     -moz-user-select: none;
   }`
+css('style.css')
 
 function mainView (state, emit) {
   return html`
-    <body class='flex flex-column justify-between items-center h-100 bg-washed-yellow black sans-serif'>
+    <body class='flex flex-column justify-between items-center bg-washed-yellow black sans-serif'>
       ${header(state, emit)}
-      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//www.openstreetmap.org/export/embed.html?bbox=10.951952934265138%2C59.64363172482308%2C11.061000823974611%2C59.671749816409886&amp;layer=hot" style="border: 1px solid transparent"></iframe>
+      ${map.render([11.000, 59.660])}
       ${pageContent(state, emit)}
       ${footer(state, emit)}
     </body>
@@ -112,6 +118,7 @@ function formatMarkdown (el, i) {
     if (nodeName === 'pre') el.classList.value = 'f3 bg-dark-gray mw9 pa4 tl overflow-y-auto'
     if (nodeName === 'ul') el.classList.value = 'list lh-copy'
     if (nodeName === 'table') el.classList.value = 'w-100'
+    if (nodeName === 'img') el.classList.value = 'mt2'
     el.classList.add('ph4-ns', 'ph5-l', 'ph2', 'mw8', 'w-100')
   }
 }
