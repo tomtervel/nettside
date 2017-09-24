@@ -1,11 +1,8 @@
 var Nanocomponent = require('nanocomponent')
-var mapboxgl = require('mapbox-gl')
 var html = require('bel')
 var onIdle = require('on-idle')
 
-mapboxgl.accessToken = process.env.MAPBOX_TOKEN
-
-module.exports = class Mapbox extends Nanocomponent {
+class Mapbox extends Nanocomponent {
   constructor () {
     super()
     this._log = require('nanologger')('mapbox')
@@ -15,7 +12,7 @@ module.exports = class Mapbox extends Nanocomponent {
   createElement (coords) {
     this.coords = coords
     return html`
-      <div class="w-100 vh-50 vh-50-l mb4 overflow-hidden relative">
+      <div class="w-100 vhs-duration-4 vhs-ease-in vhs-fade vhs-reverse mb4 overflow-hidden relative" style="height: 400px;">
       </div>
     `
   }
@@ -35,18 +32,26 @@ module.exports = class Mapbox extends Nanocomponent {
     var coords = this.coords
     this._log.info('create-map', coords)
 
-    var map = new mapboxgl.Map({
+    var map = new window.mapboxgl.Map({
       container: el,
       style: 'mapbox://styles/benlyn/cj7tttb9y1jbe2rmsdpeiacdv',
       center: coords,
-      zoom: 13.5,
-      interactive: false
+      zoom: 10.5,
+      scrollZoom: false,
+      logoPosition: 'bottom-right',
+      attributionControl: false
     })
     this.map = map
   }
   load () {
     this._log.info('load')
     this.map.resize()
+    this.map.easeTo({ bearing: 360, pitch: 30, duration: 10000, zoom: 14 })
+    setTimeout(() => {
+      this.map.addControl(new window.mapboxgl.AttributionControl({
+        compact: true
+      }))
+    }, 15000)
   }
 
   unload () {
@@ -56,3 +61,5 @@ module.exports = class Mapbox extends Nanocomponent {
     this.coords = [0, 0]
   }
 }
+
+module.exports = Mapbox

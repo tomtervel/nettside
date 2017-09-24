@@ -1,4 +1,4 @@
 # Nettside for Tomter Vel
 
 Rediger filer i `/assets/pages` for oppdatering av innhold.
-Du finne ut mer om [markdown syntaksen](https://help.github.com/categories/writing-on-github/)
+Her har du en del exempler for bruk av [markdown syntaksen](https://ungoldman.github.io/style.css/guide.html)
