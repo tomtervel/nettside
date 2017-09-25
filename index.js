@@ -30,6 +30,7 @@ function init (state, emitter) {
     }
     window.mapboxgl.accessToken = mapBoxToken
     map = new MapComponent()
+    emitter.emit(state.events.DOMTITLECHANGE, 'Tomter Vel')
     emitter.emit(state.events.RENDER)
   })
 }
@@ -70,7 +71,7 @@ function mainView (state, emit) {
 function header (state, emit) {
   return html`
     <header class="mw8 w-100 pa3-m pa4-l pa2 unselectable flex flex-column flex-row-ns justify-between">
-      <h1 class="ma0 h2 h3-l">
+      <h1 class="ma0 h3 h3-l">
         <img 
           class="logo h2 h3-l ${state.params.page !== 'active' && 'pointer'}"
           ondragstart=${function () { return false }}
