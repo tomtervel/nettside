@@ -15,7 +15,7 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "git+https://git@github.com/choojs/bankai#new-new-new",
+    "bankai": "^9.0.0-rc1",
     "brfs": "^1.4.3",
     "choo": "^6.1.0",
     "choo-persist": "^3.0.2",
