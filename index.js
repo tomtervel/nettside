@@ -41,7 +41,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 css('tachyons')
-css('vhs')
+css('style.css')
 css`
   html {
     height: 100%;
@@ -56,13 +56,12 @@ css`
     user-select: none;
     -moz-user-select: none;
   }`
-css('style.css')
 
 function mainView (state, emit) {
   return html`
     <body class='flex flex-column justify-between items-center bg-washed-yellow black sans-serif'>
       ${header(state, emit)}
-      ${map ? map.render([11.000, 59.660]) : null}
+      ${map ? map.render([11.000, 59.660]) : html`<div class="mb4" style="height: 400px"></div>`}
       ${pageContent(state, emit)}
       ${footer(state, emit)}
     </body>
