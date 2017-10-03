@@ -79,7 +79,7 @@ function header (state, emit) {
         />
         <span class="clip">Tomter Vel</span>
       </h1>
-      <nav class="f3-l pt2 pt0-ns flex flex-column justify-center">
+      <nav class="f3-l pt2 pt0-ns flex flex-column justify-center align-center-ns">
         ${menuElement(state, emit)}
       </nav>
     </header>

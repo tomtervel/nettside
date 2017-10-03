@@ -1,8 +1,8 @@
 {
   "name": "Tomter Vel",
-  "short_name": "Forening for Tomter og inbyggere",
+  "short_name": "Forening for Tomter og innbyggere",
   "start_url": "/",
   "display": "minimal-ui",
-  "background_color": "#fff",
+  "background_color": "#fffceb",
   "theme_color": "rgb(23, 133, 194)"
 }
