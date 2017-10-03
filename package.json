@@ -15,7 +15,7 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "^9.0.0-rc1",
+    "bankai": "^9.0.0-rc2",
     "brfs": "^1.4.3",
     "choo": "^6.1.0",
     "choo-persist": "^3.0.2",
@@ -23,7 +23,6 @@
     "custom-html-transform": "./transform",
     "dotenv": "^4.0.0",
     "envify": "^4.1.0",
-    "mapbox-gl": "^0.40.1",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
     "nanocomponent": "^6.4.2",
