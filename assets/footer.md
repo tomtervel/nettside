@@ -2,4 +2,4 @@
 
 Vi ønsker at Tomter vel skal være et effektivt organ for Tomters innbyggere. For saker som angår vårt felles bosted så trenger vi aktive inbyggere som bryr seg. Har du en sak du ønsker å ta opp, eller en sak du vil delta i så meld fra på [e-post til post@tomtervel.no](mailto:post@tomtervel.no "Skriv epost").
 
-<small>Om du savner informasjon eller har annen tilbakemelding for nettstedet kan du [opprette en henvendelse på github](https://www.github.com/tomtervel/nettside/issues/new).</small>
+<small>Om du savner informasjon eller har annen tilbakemelding for nettsiden kan du [opprette en henvendelse på github](https://www.github.com/tomtervel/nettside/issues/new).</small>
