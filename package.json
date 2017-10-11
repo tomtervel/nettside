@@ -3,7 +3,8 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
-    "build": "bankai build; create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
+    "build": "bankai build; npm run build:404",
+    "build:404": "create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
@@ -15,19 +16,17 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "^9.0.0-rc2",
+    "bankai": "^9.0.0-rc6",
     "brfs": "^1.4.3",
-    "choo": "^6.1.0",
+    "choo": "^6.4.2",
+    "choo-devtools": "^1.4.0",
     "choo-persist": "^3.0.2",
     "create-html": "^4.0.0",
-    "custom-html-transform": "./transform",
     "dotenv": "^4.0.0",
     "envify": "^4.1.0",
     "marked": "^0.3.6",
-    "mkdirp": "^0.5.1",
     "nanocomponent": "^6.4.2",
     "sheetify": "^6.2.0",
-    "style.css": "^1.0.0-beta-1",
     "tachyons": "^4.8.1"
   },
   "devDependencies": {
@@ -39,11 +38,6 @@
     "transform": [
       "brfs",
       "envify"
-    ]
-  },
-  "documentify": {
-    "transform": [
-      "custom-html-transform"
     ]
   },
   "eslintConfig": {

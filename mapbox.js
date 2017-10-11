@@ -12,7 +12,7 @@ class Mapbox extends Nanocomponent {
   createElement (coords) {
     this.coords = coords
     return html`
-      <div class="w-100 mb4 overflow-hidden relative" style="height: 400px;">
+      <div class="w-100 mb4 overflow-hidden relative vh-50 map-brown">
       </div>
     `
   }
@@ -51,7 +51,7 @@ class Mapbox extends Nanocomponent {
       this.map.addControl(new window.mapboxgl.AttributionControl({
         compact: true
       }))
-    }, 15000)
+    }, 10000)
   }
 
   unload () {
