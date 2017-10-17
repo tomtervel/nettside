@@ -171,7 +171,7 @@ function menuElements (state, emit) {
       ${Object.keys(state.pages).map(function (path) {
         if (path === '/') return null
         return html`
-          <li class="${path !== state.route ? 'pointer' : 'bg-light-yellow'} b pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate tracked-tight"
+          <li class="${path !== state.route ? 'pointer' : 'bg-light-yellow'} b pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"
             onclick=${function () { emit(state.events.PUSHSTATE, path) }}>
             ${state.pages[path].title}
           </li>
