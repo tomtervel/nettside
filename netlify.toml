@@ -1,8 +1,2 @@
 redirects = [
-  {
-    from = "/*",
-    to = "/index.html",
-    status = 200
-    # forse = true
-  }
-]
+  {from = "/*", to = "/index.html", status = 200}]

@@ -3,8 +3,7 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
-    "build": "bankai build; npm run build:404",
-    "build:404": "create-html --head '<script>sessionStorage.redirect = location.href;</script><meta http-equiv=\"refresh\" content=\"0;URL='/'\">' > dist/404.html",
+    "build": "bankai build",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
