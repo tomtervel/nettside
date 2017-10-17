@@ -1,4 +1,8 @@
-Tomter Vel inviterer nye og gamle, små og store til  høstsamling på Tomters flotte turplass «Gullenga», søndag 22. oktober kl. 12:00 – 15:00
+## Høstsamling
+
+#### søndag 22. oktober, 12:00 – 15:00
+
+Tomter Vel inviterer nye og gamle, små og store til  høstsamling på Tomters flotte turplass «Gullenga»
 
 Servering av gratis grillpølser og drikke ved lavoen. Har også et vegetar-alternativ.
 Natursti med trekning av flotte premier kl. 14:45.
