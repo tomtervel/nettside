@@ -31,6 +31,9 @@ css`
   #content {
     min-height: 50vh;
   }
+  #content p {
+    line-height: 1.5em;
+  }
   #content ul {
     line-height: 1.75em;
   }
@@ -183,7 +186,7 @@ function menuElements (state, emit) {
 
 function pageContent (state, emit) {
   return html`
-    <main class="w-100 pv5-l pv3 f6 f5-ns f4-l flex flex-column items-center lh-copy bg-animate" id="content">
+    <main class="w-100 pv5-l pv3 f6 f5-ns f4-l flex flex-column items-center bg-animate" id="content">
       <article class="flex flex-column mw8 ph4-ns ph2 ph5-l">
         ${raw(md(state.pages[state.route].markdown))}
       </article>

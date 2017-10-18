@@ -1,6 +1,7 @@
 {
   "name": "Tomter Vel",
-  "short_name": "Forening for Tomter og innbyggere",
+  "description": "Forening for Tomter og innbyggere",
+  "short_name": "tomtervel",
   "start_url": "/",
   "display": "minimal-ui",
   "background_color": "#fffceb",
