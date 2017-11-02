@@ -6,8 +6,7 @@
 * Tomter bygdekvinnelag serverer sveler
 * Soul Children synger
 ### Vi satser på nissebesøk
-
-----------------
+## ----------------
 Små og store hjertelig velkommen!
 ## Høstsamling
 #### søndag 22. oktober, 12:00 – 15:00
