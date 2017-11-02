@@ -25,6 +25,9 @@ css`
   header, main, footer, div {
     flex-shrink: 0;
   }
+  hr {
+    width: 100%;
+  }
   #content div > *:first-child {
     text-align: center;
   }
