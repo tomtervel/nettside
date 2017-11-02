@@ -2,9 +2,9 @@
 ## Julegrantenning i Tomter sentrum
 #### Søndag 3.12. kl. 17:00.
 
-• Fakkeltoget går fra idrettsplassen kl. 16:30
-• Tomter bygdekvinnelag serverer sveler
-• Soul Children synger
+* Fakkeltoget går fra idrettsplassen kl. 16:30
+* Tomter bygdekvinnelag serverer sveler
+* Soul Children synger
 ### Vi satser på nissebesøk
 
 ----------------
