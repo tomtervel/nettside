@@ -1,6 +1,5 @@
-### Tomtger vel ønsker velkommen til 
-## Julegrantenning
-### i Tomter sentrum
+### Tomter vel ønsker velkommen til 
+## Julegrantenning i Tomter sentrum
 #### Søndag 3.12. kl. 17:00.
 
 • Fakkeltoget går fra idrettsplassen kl. 16:30
