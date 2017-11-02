@@ -5,9 +5,12 @@
 * Fakkeltoget går fra idrettsplassen kl. 16:30
 * Tomter bygdekvinnelag serverer sveler
 * Soul Children synger
+
 ### Vi satser på nissebesøk
-## ----------------
+
 Små og store hjertelig velkommen!
+
+----------------
 ## Høstsamling
 #### søndag 22. oktober, 12:00 – 15:00
 Tomter Vel inviterer nye og gamle, små og store til  høstsamling på Tomters flotte turplass «Gullenga»
