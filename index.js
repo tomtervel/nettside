@@ -12,50 +12,10 @@ var MapBox = require('./mapbox')
 var logo = fs.readFileSync(__dirname + '/assets/logo.svg', 'base64')
 var pagesFolder = fs.readdirSync(__dirname + '/assets/pages')
 var footerMarkdown = fs.readFileSync(__dirname + '/assets/footer.md', 'utf-8')
-var map = null
+var tomterMap = null
 
 css('tachyons')
-css`
-  html {
-    min-height: 100%;
-  }
-  a, a:hover, a:visited {
-    color: rgb(23, 133, 194);
-  }
-  header, main, footer, div {
-    flex-shrink: 0;
-  }
-  hr {
-    width: 100%;
-  }
-  #content div > *:first-child {
-    text-align: center;
-  }
-  #content {
-    min-height: 50vh;
-  }
-  #content p {
-    line-height: 1.5em;
-  }
-  #content ul {
-    line-height: 1.75em;
-  }
-  footer a, footer a:hover, footer a:visited {
-    color: white;
-  }
-  .bg-vel-blue {
-    background-color: rgb(23, 133, 194);
-  }
-  .vel-blue {
-    color: rgb(23, 133, 194);
-  }
-  .map-brown {
-    background-color: rgb(183,174,156);
-  }
-  .unselectable {
-    user-select: none;
-    -moz-user-select: none;
-  }`
+css('./app.css')
 
 app.use(persist())
 app.use(markdownPages(pagesFolder))
@@ -83,7 +43,7 @@ function init (state, emitter) {
 
     loadMapBox(() => {
       window.mapboxgl.accessToken = process.env.MAPBOX_TOKEN
-      map = new MapBox()
+      tomterMap = new MapBox()
       emitter.emit(state.events.RENDER)
     })
   })
@@ -105,7 +65,7 @@ function markdownPages (pagesFolder) {
     // Populate an object map of urls with titlecasing, filename and markdown keys
     var pages = pagesFolder.reduce(function (acc, page) {
       var path = page !== 'index.md' ? '/' + page.slice(0, page.indexOf('.md')) : '/'
-      acc[path] = { file: page, markdown: '', title: toProperCase(page.slice(0, page.indexOf('.md'))) }
+      acc[path] = { file: page, markdown: '', title: toTitleCase(page.slice(0, page.indexOf('.md'))) }
       if (!state.pages[path]) state.pages[path] = acc[path]
       app.route(path, mainView)
       return acc
@@ -130,8 +90,8 @@ function markdownPages (pagesFolder) {
       })
     })
      // Titlecasing function
-    function toProperCase (str) {
-      return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
+    function toTitleCase (str) {
+      return str.split(' ').map((w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase()).join(' ')
     }
   }
 }
@@ -143,7 +103,7 @@ function mainView (state, emit) {
       ${!state.pages[state.route]
         ? fourOhFour()
         : [
-          map ? map.render([11.000, 59.660]) : html`<div class="w-100 vh-50 map-brown"></div>`,
+          tomterMap ? tomterMap.render([11.000, 59.660]) : html`<div class="w-100 vh-50 map-brown"></div>`,
           pageContent(state, emit)
         ]
       }
@@ -153,14 +113,16 @@ function mainView (state, emit) {
 }
 function header (state, emit) {
   return html`
-    <header class="mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-column flex-row-ns justify-between">
+    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-column flex-row-ns justify-between">
       <h1 class="flex items-center ma0 h3 h3-l">
         <img 
           class="logo h2 h3-ns ${state.href ? 'pointer' : 'active'}"
-          ondragstart=${function () { return false }}
+          ondragstart=${() => false}
           onclick=${function () { emit(state.events.PUSHSTATE, '/') }}
           src="data:image/svg+xml;base64,${logo}"
           rel="logo"
+          role="presentation"
+          alt="logo"
         />
         <span class="clip">Tomter Vel</span>
       </h1>
@@ -173,11 +135,11 @@ function header (state, emit) {
 
 function menuElements (state, emit) {
   return html`
-    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-reverse-ns pl0 pl4-ns content-end justify-center align-center">
-      ${Object.keys(state.pages).map(function (path) {
+    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns content-end justify-center align-center">
+      ${Object.keys(state.pages).sort().map(function (path) {
         if (path === '/') return null
         return html`
-          <li class="${path !== state.route ? 'pointer' : 'bg-light-yellow'} b pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"
+          <li id=${path} class="${path !== state.route ? 'pointer' : 'bg-light-yellow'} b pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"
             onclick=${function () { emit(state.events.PUSHSTATE, path) }}>
             ${state.pages[path].title}
           </li>
@@ -189,7 +151,7 @@ function menuElements (state, emit) {
 
 function pageContent (state, emit) {
   return html`
-    <main class="w-100 pv5-l pv3 f6 f5-ns f4-l flex flex-column items-center bg-animate" id="content">
+    <main class="w-100 pv5-l pv3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate" id="content">
       <article class="flex flex-column mw8 ph4-ns ph2 ph5-l">
         ${raw(md(state.pages[state.route].markdown))}
       </article>

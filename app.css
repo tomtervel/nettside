@@ -1,0 +1,40 @@
+html {
+  min-height: 100%;
+}
+a, a:hover, a:visited {
+  color: rgb(23, 133, 194);
+}
+header, main, footer, div {
+  flex-shrink: 0;
+}
+hr {
+  width: 100%;
+}
+#content div > *:first-child {
+  text-align: center;
+}
+#content {
+  min-height: 50vh;
+}
+#content p {
+  line-height: 1.5em;
+}
+#content ul {
+  line-height: 1.75em;
+}
+footer a, footer a:hover, footer a:visited {
+  color: white;
+}
+.bg-vel-blue {
+  background-color: rgb(23, 133, 194);
+}
+.vel-blue {
+  color: rgb(23, 133, 194);
+}
+.map-brown {
+  background-color: rgb(183,174,156);
+}
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+}

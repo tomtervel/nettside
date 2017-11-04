@@ -57,8 +57,6 @@ class Mapbox extends Nanocomponent {
   unload () {
     this._log.info('unload')
     this.map.remove()
-    this.map = null
-    this.coords = [0, 0]
   }
 }
 

@@ -15,7 +15,7 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "^9.0.0-rc7",
+    "bankai": "^9.0.0-rc9",
     "brfs": "^1.4.3",
     "choo": "^6.4.2",
     "choo-devtools": "^1.4.0",
@@ -32,12 +32,6 @@
     "choo-log": "^7.2.1",
     "dependency-check": "^2.9.1",
     "standard": "^10.0.3"
-  },
-  "browserify": {
-    "transform": [
-      "brfs",
-      "envify"
-    ]
   },
   "eslintConfig": {
     "extends": "standard"
