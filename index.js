@@ -1,3 +1,4 @@
+/* eslint-disable no-path-concat */
 require('dotenv').config()
 
 var app = require('choo')()
@@ -20,7 +21,7 @@ css('./app.css')
 app.use(persist())
 app.use(markdownPages(pagesFolder))
 app.use(init)
-app.route('*', mainView)
+app.route('/*', mainView)
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-log')())
@@ -32,7 +33,8 @@ else module.exports = app
 
 function init (state, emitter) {
   state.language = 'no'
-  emitter.emit(state.events.DOMTITLECHANGE, 'Tomter Vel')
+  state.title = 'Tomter Vel'
+  state.mapSupport = true
   emitter.once(state.events.DOMCONTENTLOADED, function () {
     // redirect to content if we came from 404.html
     var redirect = window.sessionStorage.redirect
@@ -40,20 +42,22 @@ function init (state, emitter) {
     if (redirect && redirect !== window.location.href) {
       window.history.replaceState(null, null, redirect)
     }
-
-    loadMapBox(() => {
-      window.mapboxgl.accessToken = process.env.MAPBOX_TOKEN
-      tomterMap = new MapBox()
-      emitter.emit(state.events.RENDER)
-    })
+    state.mapSupport = require('mapbox-gl-supported')()
+    if (state.mapSupport) {
+      loadMapBox(() => {
+        window.mapboxgl.accessToken = process.env.MAPBOX_TOKEN
+        tomterMap = new MapBox()
+        emitter.emit(state.events.RENDER)
+      })
+    }
   })
   function loadMapBox (callback) {
     var script = document.createElement('script')
     var style = document.createElement('link')
     script.addEventListener('load', callback)
     style.setAttribute('rel', 'stylesheet')
-    script.setAttribute('src', 'https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js')
-    style.setAttribute('href', 'https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css')
+    script.setAttribute('src', 'https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js')
+    style.setAttribute('href', 'https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css')
     document.head.appendChild(script)
     document.head.appendChild(style)
   }
@@ -103,7 +107,7 @@ function mainView (state, emit) {
       ${!state.pages[state.route]
         ? fourOhFour()
         : [
-          tomterMap ? tomterMap.render([11.000, 59.660]) : html`<div class="w-100 vh-50 map-brown"></div>`,
+          state.mapSupport ? tomterMap ? tomterMap.render([11.000, 59.660]) : html`<div class="w-100 vh-50 map-brown"></div>` : null,
           pageContent(state, emit)
         ]
       }
@@ -117,7 +121,7 @@ function header (state, emit) {
       <h1 class="flex items-center ma0 h3 h3-l">
         <img 
           class="logo h2 h3-ns ${state.href ? 'pointer' : 'active'}"
-          ondragstart=${() => false}
+          ondragstart=${function () { return false }}
           onclick=${function () { emit(state.events.PUSHSTATE, '/') }}
           src="data:image/svg+xml;base64,${logo}"
           rel="logo"
@@ -149,7 +153,7 @@ function menuElements (state, emit) {
   `
 }
 
-function pageContent (state, emit) {
+function pageContent (state) {
   return html`
     <main class="w-100 pv5-l pv3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate" id="content">
       <article class="flex flex-column mw8 ph4-ns ph2 ph5-l">
@@ -159,7 +163,7 @@ function pageContent (state, emit) {
   `
 }
 
-function footer (state, emit) {
+function footer () {
   return html`
     <footer class="w-100 flex flex-column items-center bg-vel-blue washed-red">
       <div class="mw8 pv4 ph4-ns ph2 ph5-l lh-copy">
