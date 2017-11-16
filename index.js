@@ -13,7 +13,7 @@ var MapBox = require('./mapbox')
 var logo = fs.readFileSync(__dirname + '/assets/logo.svg', 'base64')
 var pagesFolder = fs.readdirSync(__dirname + '/assets/pages')
 var footerMarkdown = fs.readFileSync(__dirname + '/assets/footer.md', 'utf-8')
-var tomterMap = null
+var tomterMap
 
 css('tachyons')
 css('./app.css')

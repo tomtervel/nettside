@@ -17,10 +17,9 @@
   "dependencies": {
     "bankai": "^9.0.0-rc9",
     "brfs": "^1.4.3",
-    "choo": "^6.4.2",
-    "choo-devtools": "^1.4.0",
+    "choo": "^6.6.0",
+    "choo-devtools": "^2.2.0",
     "choo-persist": "^3.0.2",
-    "create-html": "^4.0.0",
     "dotenv": "^4.0.0",
     "envify": "^4.1.0",
     "mapbox-gl-supported": "^1.2.0",
@@ -30,7 +29,7 @@
     "tachyons": "^4.8.1"
   },
   "devDependencies": {
-    "choo-log": "^7.2.1",
+    "choo-log": "^8.0.0",
     "dependency-check": "^2.9.1",
     "standard": "^10.0.3"
   },
