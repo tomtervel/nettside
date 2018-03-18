@@ -10,7 +10,7 @@ Formålet med Tomter vel er å bidra til et godt bomiljø i Tomter sentrum og To
 * Arrangementskomité, som bidrar til julegran og 17. mai
 * Høringsinstans i forhold til kommunale saker. 
 * Farlige trafikkforhold, meldes inn til rette instans.
-* Miljøgate, som lenge er omtalt, men lite gjort enda.
+* Miljøgate, et forslag til reguleringsplan er under utarbeidelse.
 * Elvesti, er et spennende prosjekt i oppstartsfasen.
 * Oppfølging i forhold til pendlerforhold. Kan Tomter komme med i Ruter?
 * ✅ Bevaring av Misjonshuset. Huset er revet fra plassen det står på, men oppbevares av Otter Brødholt for senere gjennbruk. ![Misjonshuset](/assets/images/misjonshuset.jpg)
