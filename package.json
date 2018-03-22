@@ -15,25 +15,39 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
-    "bankai": "^9.0.0-rc9",
+    "bankai": "git://github.com/choojs/bankai.git#fix/critical",
     "brfs": "^1.4.3",
     "choo": "^6.6.0",
     "choo-devtools": "^2.2.0",
     "choo-persist": "^3.0.2",
-    "dotenv": "^4.0.0",
+    "choo-service-worker": "^2.4.0",
+    "dotenv": "^5.0.0",
     "envify": "^4.1.0",
-    "mapbox-gl-supported": "^1.2.0",
-    "marked": "^0.3.6",
+    "hstream": "^1.2.0",
+    "hypha": "^0.4.3",
+    "markdown-it": "^8.4.1",
     "nanocomponent": "^6.4.2",
-    "sheetify": "^6.2.0",
-    "tachyons": "^4.8.1"
+    "on-idle": "^3.1.4",
+    "sheetify": "^7.3.0",
+    "tachyons": "^4.9.0"
   },
   "devDependencies": {
-    "choo-log": "^8.0.0",
-    "dependency-check": "^2.9.1",
-    "standard": "^10.0.3"
+    "dependency-check": "^3.0.0",
+    "standard": "^11.0.1"
   },
   "eslintConfig": {
     "extends": "standard"
+  },
+  "browserify": {
+    "transform": [
+      "envify",
+      "brfs",
+      "hypha/transform"
+    ]
+  },
+  "documentify": {
+    "transform": [
+      "./headertags.js"
+    ]
   }
 }

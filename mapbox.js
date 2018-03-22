@@ -1,52 +1,24 @@
 var Nanocomponent = require('nanocomponent')
-var html = require('bel')
+var html = require('choo/html')
 var onIdle = require('on-idle')
 
 class Mapbox extends Nanocomponent {
   constructor () {
     super()
-    this._log = require('nanologger')('mapbox')
     this.map = null
     this.coords = [0, 0]
-  }
-  createElement (coords) {
-    this.coords = coords
-    return html`
-      <div class="w-100 overflow-hidden relative vh-50 map-brown">
-      </div>
-    `
-  }
-  update (coords) {
-    if (!this.map) return this._log.warn('missing map', 'failed to update')
-    if (coords[0] !== this.coords[0] || coords[1] !== this.coords[1]) {
-      var self = this
-      onIdle(function () {
-        self.coords = coords
-        self._log.info('update-map', coords)
-        self.map.flyTo(coords)
-      })
-    }
-    return false
-  }
-  beforerender (el) {
-    var coords = this.coords
-    this._log.info('create-map', coords)
+    this.zoom = 10.5
+    this.supported = window.mapboxgl.supported()
 
-    var map = new window.mapboxgl.Map({
-      container: el,
+    this.map = new window.mapboxgl.Map({
+      container: html`<div class="w-100 overflow-hidden relative vh-50 map-brown"></div>`,
       style: 'mapbox://styles/benlyn/cj7tttb9y1jbe2rmsdpeiacdv',
-      center: coords,
-      zoom: 10.5,
+      center: this.coords,
+      zoom: this.zoom,
       scrollZoom: false,
       logoPosition: 'bottom-right',
       attributionControl: false
     })
-    this.map = map
-  }
-  load () {
-    this._log.info('load')
-    this.map.resize()
-    this.map.easeTo({ bearing: 360, pitch: 30, duration: 10000, zoom: 14 })
     setTimeout(() => {
       this.map.addControl(new window.mapboxgl.AttributionControl({
         compact: true
@@ -54,9 +26,35 @@ class Mapbox extends Nanocomponent {
     }, 10000)
   }
 
+  createElement (coords) {
+    this.coords = coords.slice(0, 2)
+    this.zoom = coords[2]
+    return this.map._container
+  }
+
+  update (coords) {
+    if (coords.map((cord, i) => this.coords[i] !== cord).find(c => c)) {
+      this.coords = coords.slice(0, 2)
+      this.zoom = coords[2]
+      return true
+    }
+    return false
+  }
+
+  beforerender (el) {
+    this.map.resize()
+    this.map.setCenter(this.coords)
+
+    onIdle(() => {
+      this.map.resize()
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: 5000, zoom: this.zoom })
+    })
+  }
+
+  load () {
+  }
+
   unload () {
-    this._log.info('unload')
-    this.map.remove()
   }
 }
 

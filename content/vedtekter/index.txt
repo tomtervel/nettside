@@ -1,4 +1,6 @@
-# Vedtekter
+tittel: Vedtekter
+----
+beskrivelse:
 ###### av 29.03.2017
 
 ##### § 1
