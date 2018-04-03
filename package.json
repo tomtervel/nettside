@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "brfs": "^1.4.3",
+    "bankai": "^9.10.4",
     "choo": "^6.6.0",
     "choo-devtools": "^2.2.0",
     "choo-persist": "^3.0.2",
@@ -23,7 +24,7 @@
     "dotenv": "^5.0.0",
     "envify": "^4.1.0",
     "hstream": "^1.2.0",
-    "hypha": "^0.4.3",
+    "hypha": "^0.4.4",
     "markdown-it": "^8.4.1",
     "nanocomponent": "^6.4.2",
     "on-idle": "^3.1.4",
@@ -31,7 +32,6 @@
     "tachyons": "^4.9.0"
   },
   "devDependencies": {
-    "bankai": "^9.10.4",
     "dependency-check": "^3.0.0",
     "standard": "^11.0.1"
   },

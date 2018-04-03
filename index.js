@@ -51,7 +51,7 @@ function wrapper (siteContent) {
   return function (state, emitter, app) {
     state.partials = Object.assign({}, siteContent['/partials'])
     delete siteContent['/partials']
-    state.pages = Object.assign({}, siteContent) 
+    state.pages = Object.assign({}, siteContent)
   }
 }
 
@@ -61,17 +61,17 @@ function mainView (state, emit) {
   return html`
     <body class="vh-100 flex flex-column justify-between items-center bg-washed-yellow black sans-serif">
       ${header(state, emit)}
-      ${ !state.pages[state.href || '/'] 
-        ? fourOhFour()
-        : [
-          page.kart && page.kart.length >= 2  
-          ? tomterMap 
+      ${!state.pages[state.href || '/']
+    ? fourOhFour()
+    : [
+      page.kart && page.kart.length >= 2
+        ? tomterMap
           ? tomterMap.render(page.kart)
           : html`<div class="w-100 vh-50 map-brown"></div>`
-          : null,
-          pageContent(state, emit)
-        ]
-      }
+        : null,
+      pageContent(state, emit)
+    ]
+}
       ${footer(state.partials.footer || '')}
     </body>
   `
@@ -85,13 +85,13 @@ function pageContent (state, emit) {
   }).map(path => state.pages[path]).sort((a, b) => b.dato - a.dato).reverse()
   return html`
     <main class="w-100 pv5-l pv3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate" id="content">
-      <article class="flex flex-column mw8 ph4-ns ph2 ph5-l pb5 w-100">
+      <article class="mw8 ph4-ns ph2 ph5-l pb5 w-100">
         <h1 class="tc">${state.pages[state.href || '/'].tittel}</h1>
         ${raw(md.render(state.pages[state.href || '/'].beskrivelse))}
       </article>
-      ${ childPages
-        ? childPages.map(page => html`
-          <article class="flex flex-column mw8 w-100 ph4-ns ph2 ph5-l pb5 ml-auto mr-auto">
+      ${childPages
+    ? childPages.map(page => html`
+          <article class="mw8 w-100 ph4-ns ph2 ph5-l pb5 ml-auto mr-auto">
             <a class="link vel-blue" href=${page.url}>
               <h1 class="mb0">${page.tittel}</h1>
             </a>
@@ -99,8 +99,8 @@ function pageContent (state, emit) {
             ${raw(md.render(page.beskrivelse))}
           </article>
           `)
-        : null 
-      }
+    : null
+}
     </main>
   `
 }
@@ -131,9 +131,9 @@ function menuElements (state, emit) {
   return html`
     <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns content-end justify-center align-center">
       ${Object.keys(state.pages).sort().map(function (path) {
-        var pathArray = path.split('/')
-        if (path === '/' || pathArray.length > 2) return null
-        return html`
+    var pathArray = path.split('/')
+    if (path === '/' || pathArray.length > 2) return null
+    return html`
           <li
             id=${path}
             class="${state.href.indexOf(pathArray[1]) !== 1 ? 'pointer' : 'bg-light-yellow'} b pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"
@@ -142,7 +142,7 @@ function menuElements (state, emit) {
             ${state.pages[path].tittel}
           </li>
         `
-      })}
+  })}
     </ul>
   `
 }
