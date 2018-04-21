@@ -91,10 +91,22 @@ function pageContent (state, emit) {
   return html`
     <main class="w-100 pb5-l pb3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate z-2" id="content">
       <article class="mw8 ph4-ns ph2 ph5-l pb5 w-100">
-        <header class="skew-y origin-top-right w-100 pv3 bg-vel-blue white z-1 mb5" style=${currentPage.kart ? 'margin-top: -3rem' : ''}>
-          <h1 class="skew-counter top-0 right-0 origin-top-right w-100 mv0 bg tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
+        <header class="mb2 cf">
+          <div
+            class="skew-y origin-top-right w-100 pv3 bg-vel-blue white z-1"
+            style=${currentPage.kart ? 'margin: -3rem 0 4rem' : currentPage.dato ? 'margin-bottom: 4rem;': null}>
+            <h1 class="skew-counter top-0 right-0 origin-top-right w-100 mv0 bg tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
+          </div>
+          ${ currentPage.dato
+            ? html`
+              <div class="skew-y fr align w-50 origin-top-right bg-white vel-blue z-1" style="margin-top: -4.5rem">
+                <h3 class="tr f-2 mv1 skew-counter" rel="date">${currentPage.dato}</h3>
+              </div>
+            ` 
+            : null
+          }
         </header>
-          ${raw(md.render(currentPage.beskrivelse))}
+        ${raw(md.render(currentPage.beskrivelse))}
       </article>
       ${state.href !== '/'
         ? state.page().pages().sortBy('url', 'desc').toArray().map(page => html`
@@ -128,7 +140,7 @@ function header (state, emit) {
         />
         <span class="clip">Tomter Vel</span>
       </h1>
-      <nav class="f3-l pt2 pt0-ns flex flex-column justify-center items-center-ns items-stretch align-center-ns">
+      <nav class="f3-l pt2 pt0-ns flex flex-column justify-top items-center-ns items-stretch align-center-ns">
         ${menuElements(state, emit)}
       </nav>
     </header>
@@ -137,13 +149,13 @@ function header (state, emit) {
 
 function menuElements (state, emit) {
   return html`
-    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns content-end justify-center align-center">
+    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns  content-end justify-center align-center">
       ${Object.keys(state.content).sort().map(function (path) {
         var pathArray = path.split('/')
         var isCurrent = path !== state.href
         if (path === '/' || pathArray.length > 2) return null
         return html`
-          <li>
+          <li class="mv2 mv0-ns">
             <a
               href=${path}
               class="${state.href.indexOf(pathArray[1]) !== 1 ? 'pointer' : 'bg-light-yellow'} link b black pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"

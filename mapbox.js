@@ -16,13 +16,12 @@ class Mapbox extends Nanocomponent {
       center: this.coords,
       zoom: this.zoom,
       scrollZoom: false,
-      logoPosition: 'bottom-left',
+      logoPosition: 'bottom-right',
       attributionControl: false
     })
     setTimeout(() => {
       this.map.addControl(new window.mapboxgl.AttributionControl({
-        compact: true,
-        position: 'bottom-left'
+        compact: true
       }))
     }, 10000)
   }
