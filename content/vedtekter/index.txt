@@ -1,6 +1,6 @@
 tittel: Vedtekter
 ----
-dato: datert 29.03.2017
+dato: av 29.03.2017
 ----
 beskrivelse:
 

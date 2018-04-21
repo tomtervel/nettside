@@ -46,6 +46,9 @@ function init (state, emitter) {
   emitter.once(state.events.DOMCONTENTLOADED, function () {
     tomterMap = new MapBox()
     emitter.emit(state.events.RENDER)
+    emitter.on(state.events.PUSHSTATE, function () {
+      window.scrollTo(0,0)
+    })
   })
 }
 
