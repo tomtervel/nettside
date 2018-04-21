@@ -2,6 +2,8 @@ var Nanocomponent = require('nanocomponent')
 var html = require('choo/html')
 var onIdle = require('on-idle')
 
+var ANIMDURATION = 5000
+
 class Mapbox extends Nanocomponent {
   constructor () {
     super()
@@ -23,7 +25,7 @@ class Mapbox extends Nanocomponent {
       this.map.addControl(new window.mapboxgl.AttributionControl({
         compact: true
       }))
-    }, 10000)
+    }, ANIMDURATION)
   }
 
   createElement (coords) {
@@ -36,7 +38,7 @@ class Mapbox extends Nanocomponent {
     if (this.coords !== coords.slice(0, 2) || this.zoom !== coords[2]) {
       this.coords = coords.slice(0, 2)
       this.zoom = coords[2]
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: 5000, zoom: this.zoom, center: this.coords })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: this.zoom, center: this.coords })
       return true
     }
     return false
@@ -47,7 +49,7 @@ class Mapbox extends Nanocomponent {
 
     onIdle(() => {
       this.map.resize()
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: 5000, zoom: this.zoom })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: this.zoom })
     })
   }
 
