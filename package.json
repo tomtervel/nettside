@@ -3,7 +3,7 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
-    "build": "bankai build",
+    "build": "bankai build ./dist",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
@@ -15,9 +15,9 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
+    "bankai": "^9.11.0",
     "brfs": "^1.4.3",
-    "bankai": "^9.10.4",
-    "choo": "^6.6.0",
+    "choo": "^6.10.3",
     "choo-devtools": "^2.2.0",
     "choo-persist": "^3.0.2",
     "choo-service-worker": "^2.4.0",
@@ -27,6 +27,7 @@
     "hypha": "^0.4.4",
     "markdown-it": "^8.4.1",
     "nanocomponent": "^6.4.2",
+    "nanopage": "^0.0.1-next.3",
     "on-idle": "^3.1.4",
     "sheetify": "^7.3.0",
     "tachyons": "^4.9.0"

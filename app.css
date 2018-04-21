@@ -1,7 +1,7 @@
 html {
   min-height: 100%;
 }
-a, a:hover, a:visited {
+#content a, #content a:hover, #content a:visited {
   color: rgb(23, 133, 194);
 }
 header, main, footer, div {
@@ -30,6 +30,18 @@ footer a, footer a:hover, footer a:visited {
 }
 .vel-blue {
   color: rgb(23, 133, 194);
+}
+.skew-y {
+  transform: skewY(-1.5deg);
+}
+.rotate-tiny {
+  transform: skewY(1.5) rotate(-1.5deg);
+}
+.origin-top-left {
+  transform-origin: left top;
+}
+.origin-top-right {
+  transform-origin: top right;
 }
 .map-brown {
   background-color: rgb(183,174,156);

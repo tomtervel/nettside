@@ -11,17 +11,18 @@ class Mapbox extends Nanocomponent {
     this.supported = window.mapboxgl.supported()
 
     this.map = new window.mapboxgl.Map({
-      container: html`<div class="w-100 overflow-hidden relative vh-50 map-brown"></div>`,
+      container: html`<div class="w-100 overflow-hidden relative vh-50 z-0 map-brown"></div>`,
       style: 'mapbox://styles/benlyn/cj7tttb9y1jbe2rmsdpeiacdv',
       center: this.coords,
       zoom: this.zoom,
       scrollZoom: false,
-      logoPosition: 'bottom-right',
+      logoPosition: 'bottom-left',
       attributionControl: false
     })
     setTimeout(() => {
       this.map.addControl(new window.mapboxgl.AttributionControl({
-        compact: true
+        compact: true,
+        position: 'bottom-left'
       }))
     }, 10000)
   }
@@ -33,16 +34,16 @@ class Mapbox extends Nanocomponent {
   }
 
   update (coords) {
-    if (coords.map((cord, i) => this.coords[i] !== cord).find(c => c)) {
+    if (this.coords !== coords.slice(0, 2) || this.zoom !== coords[2]) {
       this.coords = coords.slice(0, 2)
       this.zoom = coords[2]
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: 5000, zoom: this.zoom, center: this.coords })
       return true
     }
     return false
   }
 
   beforerender (el) {
-    this.map.resize()
     this.map.setCenter(this.coords)
 
     onIdle(() => {

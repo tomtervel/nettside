@@ -1,5 +1,10 @@
 tittel: Høstsamling
 ----
+kart:
+  - 11.0055885
+  - 59.6613312
+  - 17
+----
 dato: Søndag 22. oktober kl. 12:00 – 15:00
 ----
 beskrivelse:

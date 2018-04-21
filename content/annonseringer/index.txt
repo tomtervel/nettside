@@ -1,4 +1,3 @@
 tittel: Annonseringer
 ----
 beskrivelse:
-Her er våre siste annonseringer
