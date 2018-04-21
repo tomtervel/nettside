@@ -88,7 +88,6 @@ function mainView (state, emit) {
 
 function pageContent (state, emit) {
   var currentPage = state.page().value()
-  console.log(currentPage)
   return html`
     <main class="w-100 pb5-l pb3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate z-2" id="content">
       <article class="mw8 ph4-ns ph2 ph5-l pb5 w-100">

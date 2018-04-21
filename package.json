@@ -3,7 +3,7 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
-    "build": "bankai build",
+    "build": "bankai build index.js ./dist",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
