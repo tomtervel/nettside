@@ -3,7 +3,7 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
-    "build": "bankai build ./dist",
+    "build": "bankai build",
     "test": "standard && npm run deps && node test.js"
   },
   "main": "index.js",
@@ -15,6 +15,7 @@
     "url": "git+https://gitlab.com/tomtervel/nettside.git"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "bankai": "^9.11.0",
     "brfs": "^1.4.3",
     "choo": "^6.10.3",
