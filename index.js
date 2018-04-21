@@ -96,8 +96,8 @@ function pageContent (state, emit) {
       <article class="mw8 ph4-ns ph2 ph5-l pb5 w-100">
         <header class="mb2 cf">
           <div
-            class="skew-y origin-top-right w-100 pv3 bg-vel-blue white z-1"
-            style=${currentPage.kart ? 'margin: -3rem 0 4rem' : currentPage.dato ? 'margin-bottom: 4rem;': null}>
+            class="skew-y origin-top-right w-100 pv3 bg-vel-blue mb5 white z-1"
+            style=${currentPage.kart ? 'margin-top: -3rem' : ''}>
             <h1 class="skew-counter top-0 right-0 origin-top-right w-100 mv0 bg tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
           </div>
           ${ currentPage.dato
@@ -110,23 +110,15 @@ function pageContent (state, emit) {
           }
         </header>
         ${raw(md.render(currentPage.beskrivelse))}
+        ${state.href !== '/'
+          ? state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)
+          : null
+        }
       </article>
-      ${state.href !== '/'
-        ? state.page().pages().sortBy('url', 'desc').toArray().map(page => html`
-              <article class="mw8 w-100 ph4-ns ph2 ph5-l pb5 ml-auto mr-auto">
-                <a class="link vel-blue" href=${page.url}>
-                  <h1 class="mb0">${page.tittel}</h1>
-                </a>
-                <h5>${page.dato}</h5>
-
-                ${raw(md.render(page.beskrivelse))}
-              </article>
-              `)
-        : null
-    }
     </main>
   `
 }
+
 
 function header (state, emit) {
   return html`
@@ -169,6 +161,18 @@ function menuElements (state, emit) {
         `
       })}
     </ul>
+  `
+}
+
+function pageListing (page) {
+  return html`
+    <section class="pb3 pb5-ns">
+      <a class="link vel-blue" href=${page.url}>
+        <h1 class="mb0">${page.tittel}</h1>
+      </a>
+      <h5>${page.dato}</h5>
+      ${raw(md.render(page.beskrivelse))}
+    </section>
   `
 }
 
