@@ -1,8 +1,10 @@
 html {
   min-height: 100%;
+  --map-accent: rgb(183,174,156);
+  --vel-blue: rgb(23, 133, 194);
 }
 #content a, #content a:hover, #content a:visited {
-  color: rgb(23, 133, 194);
+  color: var(--vel-blue, rgb(23, 133, 194));
 }
 header, main, footer, div {
   flex-shrink: 0;
@@ -26,10 +28,10 @@ footer a, footer a:hover, footer a:visited {
   color: white;
 }
 .bg-vel-blue {
-  background-color: rgb(23, 133, 194);
+  background-color: var(--vel-blue, rgb(23, 133, 194));
 }
 .vel-blue {
-  color: rgb(23, 133, 194);
+  color: var(--vel-blue, rgb(23, 133, 194));
 }
 .skew-y {
   transform: skewY(-1.5deg);
@@ -43,8 +45,8 @@ footer a, footer a:hover, footer a:visited {
 .origin-top-right {
   transform-origin: top right;
 }
-.map-brown {
-  background-color: rgb(183,174,156);
+.bg-map-accent {
+  background-color: var(--map-accent, rgb(183,174,156));
 }
 .unselectable {
   user-select: none;

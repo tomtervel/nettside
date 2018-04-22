@@ -78,7 +78,7 @@ function mainView (state, emit) {
               ]
               : [
                 html`<div class="skew-y origin-top-right h4 bg-washed-yellow w-100 z-1" style="margin-top: -8rem; margin-bottom: -5rem;"></div>`,
-                html`<div class="w-100 vh-50 map-brown z-0"></div>`
+                html`<div class="w-100 vh-50 bg-map-accent z-0"></div>`
               ]
             : null,
           pageContent(state, emit)
@@ -98,18 +98,18 @@ function pageContent (state, emit) {
           <div
             class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1"
             style=${currentPage.kart ? 'margin-top: -3rem' : ''}>
-            <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
+            <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns fw4 tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
           </div>
           ${ currentPage.dato
             ? html`
               <div class="skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
-                <h3 class="tr f-2 mv1 mh2 skew-counter" rel="date">${currentPage.dato}</h3>
+                <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${currentPage.dato}</h3>
               </div>
             ` 
             : null
           }
         </header>
-        ${raw(md.render(currentPage.beskrivelse))}
+        ${raw(md.render(currentPage.beskrivelse || ''))}
         ${state.href !== '/'
           ? state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)
           : null
@@ -122,7 +122,7 @@ function pageContent (state, emit) {
 
 function header (state, emit) {
   return html`
-    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-column flex-row-ns justify-between z-2">
+    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-row justify-between z-2">
       <h1 class="flex items-center ma0 h3 h3-l">
         <img
           class="logo h2 h3-ns ${state.href ? 'pointer' : 'active'}"
@@ -144,13 +144,13 @@ function header (state, emit) {
 
 function menuElements (state, emit) {
   return html`
-    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns  content-end justify-center align-center">
+    <ul class="list ma0 flex flex-column flex-wrap-ns flex-row-ns pl0 pl4-ns lh-title content-end justify-center align-center">
       ${Object.keys(state.content).sort().map(function (path) {
         var pathArray = path.split('/')
         var isCurrent = path !== state.href
         if (path === '/' || pathArray.length > 2) return null
         return html`
-          <li class="mv2 mv0-ns">
+          <li class="mv2 mt0-ns tr mv1-ns">
             <a
               href=${path}
               class="${state.href.indexOf(pathArray[1]) !== 1 ? 'pointer' : 'bg-light-yellow'} link b black pa1 ml2-ns hover-bg-light-yellow bn bb-ns bg-animate"
@@ -165,12 +165,14 @@ function menuElements (state, emit) {
 }
 
 function pageListing (page) {
+  assert.equal(typeof page.tittel, 'string')
+  assert.equal(typeof page.beskrivelse, 'string')
   return html`
     <section class="pb3 pb5-ns">
       <a class="link vel-blue" href=${page.url}>
         <h1 class="mb0">${page.tittel}</h1>
       </a>
-      <h5>${page.dato}</h5>
+      ${page.dato ? html`<h5>${page.dato}</h5>` : null }
       ${raw(md.render(page.beskrivelse))}
     </section>
   `
