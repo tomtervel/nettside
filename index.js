@@ -93,10 +93,10 @@ function pageContent (state, emit) {
   var currentPage = state.page().value()
   return html`
     <main class="w-100 pb5-l pb3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate z-2" id="content">
-      <article class="mw8 ph4-ns ph2 ph5-l pb5 w-100">
+      <article class="mw8 ph4-ns ph2 ph5-l pb3 pb5-ns w-100">
         <header class="mb2 cf">
           <div
-            class="skew-y origin-top-right w-100 pv3 bg-vel-blue mb5 white z-1"
+            class="skew-y origin-top-right w-100 pv3 bg-vel-blue mb3 mb4-m mb5-l ph2 white z-1"
             style=${currentPage.kart ? 'margin-top: -3rem' : ''}>
             <h1 class="skew-counter top-0 right-0 origin-top-right w-100 mv0 bg tc rotate-tiny origin-top-right ">${currentPage.tittel}</h1>
           </div>
