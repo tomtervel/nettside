@@ -52,12 +52,6 @@ class Mapbox extends Nanocomponent {
       this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: innerWidth > 420 ? this.zoom : this.zoom - 2 })
     })
   }
-
-  load () {
-  }
-
-  unload () {
-  }
 }
 
 module.exports = Mapbox
