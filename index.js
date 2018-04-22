@@ -190,7 +190,7 @@ function footer (markdown) {
 function fourOhFour () {
   return html`
     <main class="w-100 tc pv6 ph3 red bg-animate" id="content">
-      <h1 class="fw2">Vel, vel, vel…<br />Vi fant ikke siden du spurte etter.</h1>
+      <h1 class="fw2">Vel, vel, vel…<br />Siden du søkte har enten flyttet på seg eller finnes ikke lenger.</h1>
     </main>
   `
 }
