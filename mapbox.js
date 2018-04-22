@@ -38,7 +38,7 @@ class Mapbox extends Nanocomponent {
     if (this.coords !== coords.slice(0, 2) || this.zoom !== coords[2]) {
       this.coords = coords.slice(0, 2)
       this.zoom = coords[2]
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: this.zoom, center: this.coords })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: innerWidth > 420 ? this.zoom : this.zoom - 2, center: this.coords })
       return true
     }
     return false
@@ -49,7 +49,7 @@ class Mapbox extends Nanocomponent {
 
     onIdle(() => {
       this.map.resize()
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: this.zoom })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: innerWidth > 420 ? this.zoom : this.zoom - 2 })
     })
   }
 
