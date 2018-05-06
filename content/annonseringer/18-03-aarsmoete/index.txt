@@ -1,5 +1,10 @@
 tittel: Årsmøte 2018
 ----
+kart: 
+  - 59.660141
+  - 11.0013609
+  - 17
+----
 dato: 23. april, klokken 19.
 ---- 
 beskrivelse:
