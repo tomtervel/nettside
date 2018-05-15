@@ -1,6 +1,4 @@
 tittel: 17. maifeiring
-<<<<<<< HEAD
-=======
 ----
 kart:
   - 11.003359
@@ -10,7 +8,7 @@ kart:
 dato: Nationaldagen
 ----
 beskrivelse:
->>>>>>> 052405cef7919df48b895a704256b2ceee52f4cc
+
 Tomter Vel og Foreldrelaget i Tomter speidergruppe inviterer til 
 
 ##17. mai-frokost 
