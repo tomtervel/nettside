@@ -8,6 +8,10 @@ kart:
 dato: Nationaldagen
 ----
 beskrivelse:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 221fad73e1e5f45614a0c3cdc682b1e7f790d8a4
 Tomter Vel og Foreldrelaget i Tomter speidergruppe inviterer til 
 
 ##17. mai-frokost 
