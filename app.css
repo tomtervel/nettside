@@ -32,6 +32,23 @@ hr {
 #content ul {
   line-height: 1.75em;
 }
+.superlist ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+.superlist li {
+  width: 13em;
+  padding: 1.1em;
+  margin-right: 1em;
+  margin-bottom: .8em;
+  color: white;
+  background: var(--vel-blue, rgb(23,133,194));
+  border: .1em white solid;
+  border-radius: .2em;
+}
 footer a, footer a:hover, footer a:visited {
   color: white;
 }
