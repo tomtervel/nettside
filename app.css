@@ -18,6 +18,9 @@ hr {
 #content {
   min-height: 50vh;
 }
+#content table {
+  width: 100%;
+}
 #content p {
   line-height: 1.5em;
 }

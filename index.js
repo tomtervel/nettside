@@ -6,7 +6,11 @@ var assert = require('assert')
 var app = require('choo')()
 var html = require('choo/html')
 var raw = require('choo/html/raw')
-var md = require('markdown-it')({html: true})
+var md = require('markdown-it')({
+  linkify: true,
+  typographer: true,
+  html: true
+})
 var css = require('sheetify')
 var fs = require('fs')
 var hypha = require('hypha')
@@ -177,6 +181,8 @@ function pageListing (page) {
 }
 
 function fileDownload (file) {
+  assert.equal(typeof file.name, 'string')
+  assert.equal(typeof file.path, 'string')
   return html`<a
     href=${file.path} 
     rel="noopener noreferrer"
