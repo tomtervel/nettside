@@ -34,13 +34,16 @@ hr {
 }
 .superlist ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
 .superlist li {
-  width: 13em;
+  box-sizing: border-box;
+  flex: auto 1 1;
+  min-width: 13em;
+  width: 20%;
   padding: 1.1em;
   margin-right: 1em;
   margin-bottom: .8em;

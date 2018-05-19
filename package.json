@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "dependency-check": "^3.0.0",
+    "minify-stream": "1.1.*",
     "standard": "^11.0.1"
   },
   "eslintConfig": {

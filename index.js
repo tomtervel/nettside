@@ -18,13 +18,11 @@ var Page = require('nanopage')
 
 var MapBox = require('./mapbox')
 var logo = fs.readFileSync(__dirname + '/assets/logo.svg', 'base64')
-
+var content = hypha.readSiteSync('./content', { parent: 'content' })
 var tomterMap = null
 
 css('tachyons')
 css('./app.css')
-
-var content = hypha.readSiteSync('./content', { parent: 'content' })
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-devtools')({
@@ -33,15 +31,13 @@ if (process.env.NODE_ENV !== 'production') {
     }
   }))
 } else {
-  // app.use(require('choo-service-worker')())
+  for (var path in content) {
+    app.route(path, mainView)
+  }
+  app.use(require('choo-service-worker')())
 }
 app.use(wrapper(content))
 app.use(init)
-
-for (var path in content) {
-  if (path === '/partials') continue
-  app.route(path, mainView)
-}
 app.route('*', mainView)
 
 module.exports = app.mount('body')
@@ -60,8 +56,6 @@ function init (state, emitter) {
 
 function wrapper (siteContent) {
   return function (state, emitter, app) {
-    state.partials = Object.assign({}, siteContent['/partials'])
-    delete siteContent['/partials']
     state.content = Object.assign({}, siteContent)
     state.page = new Page(state)
   }
@@ -74,7 +68,7 @@ function mainView (state, emit) {
     <body class="vh-100 flex flex-column justify-between items-center bg-washed-yellow black sans-serif">
       ${header(state, emit)}
       ${contentView(state, emit)}
-      ${footer(state.partials.footer || '')}
+      ${footer(state.content['/'].footer)}
     </body>
   `
 }
@@ -176,7 +170,7 @@ function pageListing (page) {
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${raw(md.render(page.beskrivelse))}
-      <hr class="b--none skew-y bg-vel-blue h1 w-20 mt5"/>
+      <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
     </section>
   `
 }
