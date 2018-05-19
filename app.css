@@ -20,6 +20,11 @@ hr {
 }
 #content table {
   width: 100%;
+  margin: 1.5em 0;
+}
+#content thead {
+  padding-bottom: .3em;
+  border-bottom: .2em solid var(--vel-blue, rgb(23,133,194));
 }
 #content p {
   line-height: 1.5em;

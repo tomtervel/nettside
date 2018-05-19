@@ -89,7 +89,7 @@ function contentView (state, emit) {
   })
   return [
     html`<div 
-      class="${(page.kart && tomterMap) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
+      class="${Array.isArray(page.kart) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
       style="margin-top: -8rem; margin-bottom: -5em;">
     </div>`,
     mapView(page.kart, tomterMap),
