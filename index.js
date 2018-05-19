@@ -170,12 +170,13 @@ function pageListing (page) {
   assert.equal(typeof page.tittel, 'string')
   assert.equal(typeof page.beskrivelse, 'string')
   return html`
-    <section class="pb3 pb5-ns">
+    <section class="pb3 pb4-ns">
       <a class="link vel-blue" href=${page.url}>
         <h1 class="mb0">${page.tittel}</h1>
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${raw(md.render(page.beskrivelse))}
+      <hr class="b--none skew-y bg-vel-blue h1 w-20 mt5"/>
     </section>
   `
 }
