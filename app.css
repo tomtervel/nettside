@@ -41,6 +41,7 @@ hr {
 }
 .superlist li {
   box-sizing: border-box;
+  font-weight: 700;
   flex: auto 1 1;
   min-width: 13em;
   width: 20%;
