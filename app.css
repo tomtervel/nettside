@@ -48,6 +48,9 @@ footer a, footer a:hover, footer a:visited {
 .bg-map-accent {
   background-color: var(--map-accent, rgb(183,174,156));
 }
+.download[href$=".pdf"]::before {
+  content: '📄 '
+}
 .unselectable {
   user-select: none;
   -moz-user-select: none;
