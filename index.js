@@ -85,8 +85,8 @@ function contentView (state, emit) {
   })
   return [
     html`<div 
-      class="${page.kart || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
-      style="margin-top: -8rem; margin-bottom: -5rem;">
+      class="${(page.kart && tomterMap) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
+      style="margin-top: -8rem; margin-bottom: -5em;">
     </div>`,
     mapView(page.kart, tomterMap),
     html`
@@ -96,7 +96,7 @@ function contentView (state, emit) {
             <div
               class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1"
               style=${page.kart ? 'margin-top: -3rem' : ''}>
-              <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns fw4 tc rotate-tiny origin-top-right ">${page.tittel}</h1>
+              <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
             <div class="${page.dato || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
               <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato}</h3>
@@ -179,7 +179,8 @@ function pageListing (page) {
 function fileDownload (file) {
   return html`<a
     href=${file.path} 
-    rel="download"
+    rel="noopener noreferrer"
+    download
     target="_blank"
     class="link pa2 bg-white mh-2 br2 ba b download">
     ${file.name}

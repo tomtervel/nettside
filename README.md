@@ -3,7 +3,7 @@
 ## Oppdatering av innhold
 
 Rediger filer i `/content` for oppdatering av innhold.
-Nye sider og poster legges til ved oppretting av ny mappe, gjerne med ett dato-prefix (`2018-08-08-navn`) og med en `index.txt` fil.
+Nye sider og poster legges til ved oppretting av ny mappe, gjerne med ett dato-prefix (`18-08-18-mappenavn`) og med en `index.txt` fil.
 
 ### `index.txt` filer
 
