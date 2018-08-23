@@ -1,4 +1,4 @@
-tittel: Komité for etablering av elvesti langs Hobølelva
+tittel: Komitéer
 ----
 kart:
   - 11.0084
