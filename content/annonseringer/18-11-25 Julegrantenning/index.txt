@@ -10,4 +10,4 @@ beskrivelse:
 * På kaféen er det eventyrstund klokken 18:00
 
 
-Hjertelig velkommen!
+## Hjertelig velkommen til store og små!
