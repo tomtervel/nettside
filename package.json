@@ -16,25 +16,25 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "bankai": "^9.11.0",
+    "bankai": "^9.15.0",
     "brfs": "^1.4.3",
-    "choo": "^6.10.3",
-    "choo-devtools": "^2.2.0",
+    "choo": "^6.13.1",
+    "choo-devtools": "^2.5.1",
     "choo-persist": "^3.0.2",
     "choo-service-worker": "^2.4.0",
     "dotenv": "^5.0.0",
     "envify": "^4.1.0",
     "hstream": "^1.2.0",
-    "hypha": "^0.4.4",
-    "markdown-it": "^8.4.1",
+    "markdown-it": "^8.4.2",
     "nanocomponent": "^6.4.2",
+    "nanocontent": "^0.4.6",
     "nanopage": "0.0.2",
     "on-idle": "^3.1.4",
-    "sheetify": "^7.3.0",
-    "tachyons": "^4.9.0"
+    "sheetify": "^7.3.3",
+    "tachyons": "^4.11.1"
   },
   "devDependencies": {
-    "dependency-check": "^3.0.0",
+    "dependency-check": "^3.2.1",
     "minify-stream": "1.1.*",
     "standard": "^11.0.1"
   },
@@ -45,7 +45,7 @@
     "transform": [
       "envify",
       "brfs",
-      "hypha/transform"
+      "nanocontent/transform"
     ]
   },
   "documentify": {

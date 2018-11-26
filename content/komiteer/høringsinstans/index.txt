@@ -1,1 +1,4 @@
-tittel: Høringsinstans for Tomters utvikling.
+tittel: Høringsinstans
+----
+beskrivelse: 
+Kommunale forhold for Tomters utvikling.

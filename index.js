@@ -13,7 +13,7 @@ var md = require('markdown-it')({
 })
 var css = require('sheetify')
 var fs = require('fs')
-var hypha = require('hypha')
+var hypha = require('nanocontent')
 var Page = require('nanopage')
 
 var MapBox = require('./mapbox')
@@ -161,8 +161,8 @@ function menuElements (state, emit) {
 }
 
 function pageListing (page) {
-  assert.equal(typeof page.tittel, 'string')
-  assert.equal(typeof page.beskrivelse, 'string')
+  assert.equal(typeof page.tittel, 'string', 'page listing is missing a title')
+  assert.equal(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
   return html`
     <section class="pb3 pb4-ns">
       <a class="link vel-blue" href=${page.url}>
