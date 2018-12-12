@@ -32,21 +32,19 @@ hr {
 #content ul {
   line-height: 1.75em;
 }
-.superlist ul {
+.superlist {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
-.superlist li {
+.superlist a{
   box-sizing: border-box;
   font-weight: 700;
-  flex: auto 1 1;
   min-width: 13em;
   width: 20%;
   padding: 1.1em;
-  margin-right: 1em;
   margin-bottom: .8em;
   color: white;
   background: var(--vel-blue, rgb(23,133,194));

@@ -30,12 +30,13 @@ if (process.env.NODE_ENV !== 'production') {
       return event !== 'DOMTitleChange'
     }
   }))
-} else {
-  for (var path in content) {
-    app.route(path, mainView)
-  }
-  app.use(require('choo-service-worker')())
 }
+
+for (var path in content) {
+  console.log(path)
+  app.route(path, mainView)
+}
+
 app.use(wrapper(content))
 app.use(init)
 app.route('*', mainView)
@@ -104,7 +105,20 @@ function contentView (state, emit) {
           <section class=${downloads.length ? 'mv4' : 'dn'} rel="files">
             ${downloads.map(fileDownload)}
           </section>
-          ${page.url === '/' ? null : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
+          ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>`: null}
+          ${page.url === '/' 
+            ? html`<section rel="komiteer">
+                <h2>Vi har komiteer for:</h2>
+                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4 glow">
+                  ${state.page('/komiteer').children()
+                    .sortBy('tittel', 'asc').toArray()
+                    .filter(page => !page.avsluttet)
+                    .map(frontedContent)
+                  }
+                </ul>
+              </section>
+              `
+            : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
     `
@@ -169,9 +183,22 @@ function pageListing (page) {
         <h1 class="mb0">${page.tittel}</h1>
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
+      ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
     </section>
+  `
+}
+
+function frontedContent (page) {
+  if (page.avsluttet) return null
+  return html`
+    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4">
+      <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
+      ${page.beskrivelse ? html`<p class="db pa2 mh3 br2 black no-underline bg-white">
+        ${page.beskrivelse.length > 140 ? page.beskrivelse.slice(0, 140) + '…' : page.beskrivelse}</p>`
+      : null} 
+    </a>
   `
 }
 

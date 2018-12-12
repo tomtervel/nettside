@@ -1,4 +1,4 @@
-tittel: Farlige trafikkforhold
+tittel: Trafikkforhold
 ----
 beskrivelse:
 Vi rapporterer inn farlige trafikkforhold i Tomters nærområde. 
