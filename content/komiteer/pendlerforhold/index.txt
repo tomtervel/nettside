@@ -1,3 +1,4 @@
 tittel: Pendlerforhold
 ----
 beskrivelse:
+Initiativ for å få oss regulert inn i Ruters krets.
