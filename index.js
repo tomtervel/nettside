@@ -102,13 +102,13 @@ function contentView (state, emit) {
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
-            <div class="${(page.dato || page.avsluttet) || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
+            <div class="${page.dato || page.avsluttet || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
               <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato || page.avsluttet}</h3>
             </div> 
           </header>
-          <section style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}"" rel="images">
-            ${images.map(function(image){
-              return html`<img class="w-100" src=${image.path}>`
+          <section class="flex" style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}" rel="images">
+            ${images.map(function (image) {
+              return html`<img class="" src=${image.path} />`
             })}
           </section>
           ${raw(md.render(page.beskrivelse || ''))}
@@ -117,9 +117,10 @@ function contentView (state, emit) {
           </section>
           ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>`: null}
           ${page.url === '/' 
-            ? html`<section rel="komiteer">
+            ? [html`
+              <section rel="komiteer">
                 <h2>Vi har komiteer for:</h2>
-                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4 glow">
+                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4">
                   ${state.page('/komiteer').children()
                     .sortBy('tittel', 'asc').toArray()
                     .filter(page => !page.avsluttet)
@@ -127,7 +128,15 @@ function contentView (state, emit) {
                   }
                 </ul>
               </section>
-              `
+              `,
+              html`
+              <section rel="annonseringer">
+                <h2>Siste Annonseringer</h2>
+                  ${state.page('/annonseringer').children()
+                    .sortBy('tittel', 'asc').toArray()
+                    .map(pageListing)
+                  }
+              </section>`]
             : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
@@ -196,17 +205,18 @@ function pageListing (page) {
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
-    </section>
+    </section> 
   `
 }
 
 function frontedContent (page) {
   if (page.avsluttet) return null
   return html`
-    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4 shadow-hover shadow-1">
+    <a href=${page.url} class="bg-vel-blue link measure-narrow br3 flex-auto mb4 shadow-hover shadow-1">
       <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
-      ${page.beskrivelse ? html`<p class="db pa2 mh3 br2 black no-underline bg-white">
-        ${page.beskrivelse.length > 140 ? page.beskrivelse.slice(0, 140) + '…' : page.beskrivelse}</p>`
+      ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white">
+        ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 140) + '…')) : raw(md.render(page.beskrivelse))}
+        </div>`
       : null} 
     </a>
   `
@@ -238,7 +248,7 @@ function footer (markdown) {
 
 function fourOhFour () {
   return html`
-    <main class="w-100 tc pv6 ph3 red bg-animate" id="content">
+    <main class="w-100 tc pv6 ph3 red" id="content">
       <h1 class="fw2">
         Vel, vel, vel…
         <br/>
