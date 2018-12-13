@@ -82,6 +82,11 @@ function contentView (state, emit) {
   }).map(function (file) {
     return page.files[file]
   })
+  var images = Object.keys(page.files).filter(function (file) {
+    return file.includes('.jpg')
+  }).map(function (file) {
+    return page.files[file]
+  })
   return [
     html`<div 
       class="${Array.isArray(page.kart) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
@@ -97,10 +102,15 @@ function contentView (state, emit) {
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
-            <div class="${page.dato || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
-              <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato}</h3>
+            <div class="${(page.dato || page.avsluttet) || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
+              <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato || page.avsluttet}</h3>
             </div> 
           </header>
+          <section style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}"" rel="images">
+            ${images.map(function(image){
+              return html`<img class="w-100" src=${image.path}>`
+            })}
+          </section>
           ${raw(md.render(page.beskrivelse || ''))}
           <section class=${downloads.length ? 'mv4' : 'dn'} rel="files">
             ${downloads.map(fileDownload)}
@@ -193,7 +203,7 @@ function pageListing (page) {
 function frontedContent (page) {
   if (page.avsluttet) return null
   return html`
-    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4">
+    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4 shadow-hover shadow-1">
       <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
       ${page.beskrivelse ? html`<p class="db pa2 mh3 br2 black no-underline bg-white">
         ${page.beskrivelse.length > 140 ? page.beskrivelse.slice(0, 140) + '…' : page.beskrivelse}</p>`
