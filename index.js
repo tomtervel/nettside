@@ -180,7 +180,7 @@ function menuElements (state, emit) {
   </ul>`
   function navElement (path) {
     var pathArray = path.split('/')
-    if (path === '/' || pathArray.length > 2) return null
+    if (path === '/' || pathArray.length > 2 || path === '/annonseringer') return null
     var isCurrent = state.href.indexOf(pathArray[1]) === 1
     return html`<li class="mv2 mt0-ns tr mv1-ns">
       <a
@@ -196,6 +196,11 @@ function menuElements (state, emit) {
 function pageListing (page) {
   assert.equal(typeof page.tittel, 'string', 'page listing is missing a title')
   assert.equal(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
+   var images = Object.keys(page.files).filter(function (file) {
+    return file.includes('.jpg')
+  }).map(function (file) {
+    return page.files[file]
+  })
   return html`
     <section class="pb3 pb4-ns">
       <a class="link vel-blue" href=${page.url}>
@@ -203,6 +208,11 @@ function pageListing (page) {
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
+      <section class="flex" rel="images">
+        ${images.map(function (image) {
+          return html`<img class="" src=${image.path} />`
+        })}
+      </section>
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
     </section> 
@@ -212,7 +222,7 @@ function pageListing (page) {
 function frontedContent (page) {
   if (page.avsluttet) return null
   return html`
-    <a href=${page.url} class="bg-vel-blue link measure-narrow br3 flex-auto mb4 shadow-hover shadow-1">
+    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4 shadow-hover shadow-1">
       <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
       ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white">
         ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 140) + '…')) : raw(md.render(page.beskrivelse))}
