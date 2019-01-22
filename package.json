@@ -1,5 +1,4 @@
-{
-  "name": "tomtervel",
+{ "name": "tomtervel",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
@@ -28,7 +27,7 @@
     "markdown-it": "^8.4.2",
     "nanocomponent": "^6.4.2",
     "nanocontent": "^0.4.6",
-    "nanopage": "0.0.2",
+    "nanopage": "0.2.0",
     "on-idle": "^3.1.4",
     "sheetify": "^7.3.3",
     "tachyons": "^4.11.1"

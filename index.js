@@ -30,12 +30,13 @@ if (process.env.NODE_ENV !== 'production') {
       return event !== 'DOMTitleChange'
     }
   }))
-} else {
-  for (var path in content) {
-    app.route(path, mainView)
-  }
-  app.use(require('choo-service-worker')())
 }
+
+for (var path in content) {
+  console.log(path)
+  app.route(path, mainView)
+}
+
 app.use(wrapper(content))
 app.use(init)
 app.route('*', mainView)
@@ -81,6 +82,11 @@ function contentView (state, emit) {
   }).map(function (file) {
     return page.files[file]
   })
+  var images = Object.keys(page.files).filter(function (file) {
+    return file.includes('.jpg')
+  }).map(function (file) {
+    return page.files[file]
+  })
   return [
     html`<div 
       class="${Array.isArray(page.kart) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
@@ -96,15 +102,42 @@ function contentView (state, emit) {
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
-            <div class="${page.dato || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
-              <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato}</h3>
+            <div class="${page.dato || page.avsluttet || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
+              <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato || page.avsluttet}</h3>
             </div> 
           </header>
+          <section class="flex" style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}" rel="images">
+            ${images.map(function (image) {
+              return html`<img class="" src=${image.path} />`
+            })}
+          </section>
           ${raw(md.render(page.beskrivelse || ''))}
           <section class=${downloads.length ? 'mv4' : 'dn'} rel="files">
             ${downloads.map(fileDownload)}
           </section>
-          ${page.url === '/' ? null : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
+          ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>`: null}
+          ${page.url === '/' 
+            ? [html`
+              <section rel="komiteer">
+                <h2>Vi har komiteer for:</h2>
+                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4">
+                  ${state.page('/komiteer').children()
+                    .sortBy('tittel', 'asc').toArray()
+                    .filter(page => !page.avsluttet)
+                    .map(frontedContent)
+                  }
+                </ul>
+              </section>
+              `,
+              html`
+              <section rel="annonseringer">
+                <h2>Siste Annonseringer</h2>
+                  ${state.page('/annonseringer').children()
+                    .sortBy('tittel', 'asc').toArray()
+                    .map(pageListing)
+                  }
+              </section>`]
+            : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
     `
@@ -147,7 +180,7 @@ function menuElements (state, emit) {
   </ul>`
   function navElement (path) {
     var pathArray = path.split('/')
-    if (path === '/' || pathArray.length > 2) return null
+    if (path === '/' || pathArray.length > 2 || path === '/annonseringer') return null
     var isCurrent = state.href.indexOf(pathArray[1]) === 1
     return html`<li class="mv2 mt0-ns tr mv1-ns">
       <a
@@ -163,15 +196,39 @@ function menuElements (state, emit) {
 function pageListing (page) {
   assert.equal(typeof page.tittel, 'string', 'page listing is missing a title')
   assert.equal(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
+   var images = Object.keys(page.files).filter(function (file) {
+    return file.includes('.jpg')
+  }).map(function (file) {
+    return page.files[file]
+  })
   return html`
     <section class="pb3 pb4-ns">
       <a class="link vel-blue" href=${page.url}>
         <h1 class="mb0">${page.tittel}</h1>
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
+      ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
+      <section class="flex" rel="images">
+        ${images.map(function (image) {
+          return html`<img class="" src=${image.path} />`
+        })}
+      </section>
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
-    </section>
+    </section> 
+  `
+}
+
+function frontedContent (page) {
+  if (page.avsluttet) return null
+  return html`
+    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4 shadow-hover shadow-1">
+      <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
+      ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white">
+        ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 140) + '…')) : raw(md.render(page.beskrivelse))}
+        </div>`
+      : null} 
+    </a>
   `
 }
 
@@ -201,7 +258,7 @@ function footer (markdown) {
 
 function fourOhFour () {
   return html`
-    <main class="w-100 tc pv6 ph3 red bg-animate" id="content">
+    <main class="w-100 tc pv6 ph3 red" id="content">
       <h1 class="fw2">
         Vel, vel, vel…
         <br/>
