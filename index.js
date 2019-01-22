@@ -119,7 +119,10 @@ function contentView (state, emit) {
           ${page.url === '/' 
             ? [html`
               <section rel="komiteer">
-                <h2>Vi har komiteer for:</h2>
+                <div
+                  class="dib center pv3 bg-vel-blue ph2 white z-1">
+                  <h1 class="mv0 bg f5 f3-ns mh2">Vi har komiteer for</h1>
+                </div>
                 <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4">
                   ${state.page('/komiteer').children()
                     .sortBy('tittel', 'asc').toArray()
@@ -131,7 +134,10 @@ function contentView (state, emit) {
               `,
               html`
               <section rel="annonseringer">
-                <h2>Siste Annonseringer</h2>
+                <div
+                  class="dib center pv3 bg-vel-blue ph2 white z-1">
+                  <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
+                </div>
                   ${state.page('/annonseringer').children()
                     .sortBy('tittel', 'asc').toArray()
                     .map(pageListing)
