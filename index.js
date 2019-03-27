@@ -132,7 +132,7 @@ function contentView (state, emit) {
                 </ul>
               </section>
               `,
-              html`
+              state.page('/annonseringer').children().toArray().length > 0 ? html`
               <section rel="annonseringer">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
@@ -142,7 +142,7 @@ function contentView (state, emit) {
                     .sortBy('tittel', 'asc').toArray()
                     .map(pageListing)
                   }
-              </section>`]
+              </section>` : null]
             : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
