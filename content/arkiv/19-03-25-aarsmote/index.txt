@@ -1,8 +1,8 @@
 tittel: Årsmøte 2019
-----
+----59.66025&lon=10.99977
 kart: 
-  - 10.999304
-  - 59.665841
+  - 10.99977
+  - 59.66025
   - 17
 ----
 dato: 25. mars, klokken 18:30.
@@ -27,7 +27,7 @@ Det har vært gjennomført følgende tiltak:
 * Flere brev og henvendelser til representanter for den nye storkommunen om Tomters interesser.
 * Feiring av nytt fortau på Tomter Café og Bar, 14. oktober med servering av kake for alle.
 * Julegrantenning, inkludert nissetog, godteposer og servering av sveler og saft.
-* Sponset konsert på kafeen under Tomterdagene. Gratis inngang!
+* Sponset konsert på kafeen under kulturuka. Gratis inngang!
 * Gav støtte til og samarbeidet med Tomter speidergruppe og Tomter bygdekvinnelag
 * Møte med FAU-leder Tomter skole om videre samarbeid omkring 17.mai-feiring på Tomter.
 
@@ -36,7 +36,7 @@ Styret har har flere komitéer som vil arbeide med for eksempel trafikkforhold, 
 **Tomter, 11. mars 2019<br/>
 Styret i Tomter Vel**
 
-## Forslag til budsjett for 2019
+## Vedtatt budsjett for 2019
 | Inntekter | Kroner |
 | :--- | ---: |
 | Grasrotandlel	| 4000 |
