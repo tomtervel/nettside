@@ -112,7 +112,7 @@ function contentView (state, emit) {
             })}
           </section>
           ${raw(md.render(page.beskrivelse || ''))}
-          <section class=${downloads.length ? 'mv4' : 'dn'} rel="files">
+          <section class=${downloads.length ? 'mv4 flex flex-wrap' : 'dn'} rel="files">
             ${downloads.map(fileDownload)}
           </section>
           ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>`: null}
@@ -216,7 +216,7 @@ function pageListing (page) {
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
       <section class="flex" rel="images">
         ${images.map(function (image) {
-          return html`<img class="" src=${image.path} />`
+          return html`<img class="h-auto" src=${image.path} />`
         })}
       </section>
       ${raw(md.render(page.beskrivelse))}
@@ -228,7 +228,7 @@ function pageListing (page) {
 function frontedContent (page) {
   if (page.avsluttet) return null
   return html`
-    <a href=${page.url} class="bg-vel-blue link mw5 br3 flex-auto mb4 shadow-hover shadow-1">
+    <a href=${page.url} class="bg-vel-blue link mw5-ns br3 flex-auto mb4 shadow-hover shadow-1">
       <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
       ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white">
         ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 140) + '…')) : raw(md.render(page.beskrivelse))}
@@ -246,7 +246,7 @@ function fileDownload (file) {
     rel="noopener noreferrer"
     download
     target="_blank"
-    class="link pa2 bg-white mh-2 br2 ba b download">
+    class="link pa2 bg-white ma1 br2 ba b download">
     ${file.name}
   </a>`
 }
