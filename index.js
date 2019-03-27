@@ -106,9 +106,9 @@ function contentView (state, emit) {
               <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato || page.avsluttet}</h3>
             </div> 
           </header>
-          <section class="flex" style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}" rel="images">
+          <section class="flex flex-wrap items-center" style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}" rel="images">
             ${images.map(function (image) {
-              return html`<img class="" src=${image.path} />`
+              return html`<img class="object-contain" src=${image.path} />`
             })}
           </section>
           ${raw(md.render(page.beskrivelse || ''))}
@@ -214,9 +214,9 @@ function pageListing (page) {
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
-      <section class="flex" rel="images">
+      <section class="flex flex-wrap items-center" rel="images">
         ${images.map(function (image) {
-          return html`<img class="h-auto" src=${image.path} />`
+          return html`<img class="object-contain" src=${image.path} />`
         })}
       </section>
       ${raw(md.render(page.beskrivelse))}
