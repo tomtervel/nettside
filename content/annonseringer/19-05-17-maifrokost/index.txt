@@ -5,7 +5,7 @@ kart:
   - 59.658424
   - 17
 ----
-dato: Nationaldagen ble feiret
+dato: Nationaldagen ble feiret med frokost på skolen!
 ----
 beskrivelse:
 Tomter Vel og foreldrelaget i Tomter speidergruppe inviterte til
