@@ -82,6 +82,9 @@ footer a, footer a:hover, footer a:visited {
   user-select: none;
   -moz-user-select: none;
 }
+.invisible {
+  visibility: hidden;
+}
 .object-contain {
   object-fit: contain;
 }

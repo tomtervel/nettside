@@ -1,16 +1,18 @@
 tittel: Elvesti
 ----
 kart:
-- 11.0084
-- 59.6631
-- 17
+  - 11.0084
+  - 59.6631
+  - 17
 ----
-dato: Juni 2019
+dato: oppdatert Juni 2019
 ----
 beskrivelse:
 Tomter Vel engasjerer en prosjektgruppe som arbeider med å etablere en elvesti
 som følger Hobølelva ved Tomter, nordover. Vi håper mange vil kunne bidra i
 dette prosjektet.
+
+![elv](/content/komiteer/elvesti/elv.jpg)
 
 Gjennom mange år er det blitt sagt og skrevet en god del om Hobølelva og utviklingspotensialene som finnes for elva. Elvestigruppen i Tomter Vel har gjennom de siste år samlet informasjon for å få til en
 natursti langs Hobølelvas nordlige del. I første omgang fra Tomter stasjon til
@@ -24,7 +26,6 @@ opprettet kontakter og har også fått svært positive signaler fra flere
 offentlige instanser. Miljødirektoratet er ivrige pådrivere av
 prosjekter som dette. Vi ser at vår elvesti vil utvikle gode miljøverdier: biomangfold, friluftsliv,
 kulturminner.
-
 
 ## Vi jobber med
 
@@ -40,15 +41,18 @@ naturens premisser og bruke naturlige materialer.
 må tas hensyn til elvens sterkt varierende vannføring. Vi rådfører oss med [Morsaprosjektet](http://morsa.org) .
 
 ### Møtepunkt i Nordalen sag
+![elvesti](/content/komiteer/elvesti/norland_sag.jpg)
 
 Strekningen fra Mjær til Brekke mølle (syd for Tomter) var et tidlig norsk
 industriområde med høy aktivitet i sin tid. Det som gjenstår fra den tid - annet
-enn demningene - er [Nordalen sag og tredreieri](http://hobol.kommune.no/nordalen-sag.5017251-354224.html), som i dag er et vernet museum. Her er det mulig å få se og demonstrert hvordan produksjon av flotte treprodukter foregikk i gamle dager, med vannkraft - uten elektronikk! ⚙️
+enn demningene - er [Nordalen sag og tredreieri](http://hobol.kommune.no/nordalen-sag.5017251-354224.html), som i dag er et vernet museum. Her er det mulig å få se og demonstrert hvordan produksjon av flotte treprodukter foregikk i gamle dager, med vannkraft - uten elektronikk!
 
 Vi mener at elvestien vil kunne gjøre museet til en naturlig møteplass for
 turgåere og at den vil kunne bidra til videre utvikling for plassen.
 
 ### Trasséer og broer
+![kart](/content/komiteer/elvesti/kart.jpg)
+
 Traséen vil følge Hobølelva fra Tomterveien i syd, nedenfor skolen, under
 jernbanebroen og videre nordover. Vi ser for oss at det lages
 forbindelsestraséer fra diverse sentrale punkter i Tomter sentrum. Disse gir

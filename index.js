@@ -82,8 +82,8 @@ function contentView (state, emit) {
   }).map(function (file) {
     return page.files[file]
   })
-  var images = Object.keys(page.files).filter(function (file) {
-    return file.includes('.jpg')
+  var coverImages = Object.keys(page.files).filter(function (file) {
+    return file.includes('cover.jpg')
   }).map(function (file) {
     return page.files[file]
   })
@@ -102,12 +102,12 @@ function contentView (state, emit) {
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
-            <div class="${page.dato || page.avsluttet || 'dn'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: -1rem;">
+            <div class="${page.dato || page.avsluttet || 'invisible'} skew-y self-end w-50 origin-top-right bg-white vel-blue z-1 ba bw1" style="margin-top: -.75rem; margin-bottom: 2em;"> 
               <h3 class="fw4 tr f-2 mv1 mh2 skew-counter" rel="date">${page.dato || page.avsluttet}</h3>
             </div> 
           </header>
-          <section class="flex flex-wrap items-center" style="${images.length > 0 ? 'margin-top: -3.8em;' : ''}" rel="images">
-            ${images.map(function (image) {
+          <section class="flex flex-wrap items-center ${coverImages.length !== 0 || 'dn'}" style="margin-top: -3.8em;" rel="coverimage">
+            ${coverImages.map(function (image) {
               return html`<img class="object-contain" src=${image.path} />`
             })}
           </section>
@@ -202,8 +202,8 @@ function menuElements (state, emit) {
 function pageListing (page) {
   assert.equal(typeof page.tittel, 'string', 'page listing is missing a title')
   assert.equal(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
-   var images = Object.keys(page.files).filter(function (file) {
-    return file.includes('.jpg')
+  var images = Object.keys(page.files).filter(function (file) {
+    return file.includes('cover.jpg')
   }).map(function (file) {
     return page.files[file]
   })
