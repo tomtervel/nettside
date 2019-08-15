@@ -1,4 +1,5 @@
-{ "name": "tomtervel",
+{
+  "name": "tomtervel",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "bankai start",
@@ -35,10 +36,14 @@
   "devDependencies": {
     "dependency-check": "^3.2.1",
     "minify-stream": "1.1.*",
-    "standard": "^11.0.1"
+    "standard": "^14.0.0-1"
   },
   "eslintConfig": {
-    "extends": "standard"
+    "extends": "standard",
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "browserify": {
     "transform": [

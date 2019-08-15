@@ -33,7 +33,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 for (var path in content) {
-  console.log(path)
   app.route(path, mainView)
 }
 
@@ -107,29 +106,27 @@ function contentView (state, emit) {
             </div> 
           </header>
           <section class="flex flex-wrap items-center ${coverImages.length !== 0 || 'dn'}" style="margin-top: -3.8em;" rel="coverimage">
-            ${coverImages.map(function (image) {
-              return html`<img class="object-contain" src=${image.path} />`
-            })}
+          ${coverImages.map(image => html`<img class="object-contain" src=${image.path} />`)}
           </section>
           ${raw(md.render(page.beskrivelse || ''))}
           <section class=${downloads.length ? 'mv4 flex flex-wrap' : 'dn'} rel="files">
             ${downloads.map(fileDownload)}
           </section>
-          ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>`: null}
-          ${page.url === '/' 
-            ? [html`
+          ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>` : null}
+          ${page.url === '/'
+            ? [
+              html`
               <section rel="komiteer">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Vi har komiteer for</h1>
                 </div>
-                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4">
-                  ${state.page('/komiteer').children()
+                <ul class="flex flex-wrap justify-between items-baseline list pl0 mt4">${
+                  state.page('/komiteer').children()
                     .sortBy('tittel', 'asc').toArray()
                     .filter(page => !page.avsluttet)
                     .map(frontedContent)
-                  }
-                </ul>
+                }</ul>
               </section>
               `,
               state.page('/annonseringer').children().toArray().length > 0 ? html`
@@ -137,12 +134,12 @@ function contentView (state, emit) {
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
-                </div>
-                  ${state.page('/annonseringer').children()
+                </div>${
+                  state.page('/annonseringer').children()
                     .sortBy('tittel', 'asc').toArray()
                     .map(pageListing)
-                  }
-              </section>` : null]
+              }</section>` : null
+            ]
             : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
@@ -200,8 +197,8 @@ function menuElements (state, emit) {
 }
 
 function pageListing (page) {
-  assert.equal(typeof page.tittel, 'string', 'page listing is missing a title')
-  assert.equal(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
+  assert.strictEqual(typeof page.tittel, 'string', 'page listing is missing a title')
+  assert.strictEqual(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
   var images = Object.keys(page.files).filter(function (file) {
     return file.includes('cover.jpg')
   }).map(function (file) {
@@ -213,12 +210,12 @@ function pageListing (page) {
         <h1 class="mb0">${page.tittel}</h1>
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
-      ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null }
-      <section class="flex flex-wrap items-center" rel="images">
-        ${images.map(function (image) {
+      ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null}
+      <section class="flex flex-wrap items-center" rel="images">${
+        images.map(function (image) {
           return html`<img class="object-contain" src=${image.path} />`
-        })}
-      </section>
+        })
+      }</section>
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
     </section> 
@@ -239,8 +236,8 @@ function frontedContent (page) {
 }
 
 function fileDownload (file) {
-  assert.equal(typeof file.name, 'string')
-  assert.equal(typeof file.path, 'string')
+  assert.strictEqual(typeof file.name, 'string')
+  assert.strictEqual(typeof file.path, 'string')
   return html`<a
     href=${file.path} 
     rel="noopener noreferrer"
@@ -252,7 +249,7 @@ function fileDownload (file) {
 }
 
 function footer (markdown) {
-  assert.equal(typeof markdown, 'string', `markdown should be type string, but was ${JSON.stringify(markdown)}`)
+  assert.strictEqual(typeof markdown, 'string', `markdown should be type string, but was ${JSON.stringify(markdown)}`)
   return html`
     <footer class="w-100 flex flex-column items-center bg-vel-blue washed-yellow">
       <div class="mw8 f6 f5-ns pv4 ph4-ns ph2 ph5-l lh-copy">

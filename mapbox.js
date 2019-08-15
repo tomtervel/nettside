@@ -14,7 +14,7 @@ class Mapbox extends Nanocomponent {
 
     this.map = new window.mapboxgl.Map({
       container: html`<div class="w-100 overflow-hidden relative vh-50 z-0 bg-map-accent"></div>`,
-      style: `mapbox://styles/benlyn/cj7tttb9y1jbe2rmsdpeiacdv`,
+      style: 'mapbox://styles/benlyn/cj7tttb9y1jbe2rmsdpeiacdv',
       center: this.coords,
       zoom: this.zoom,
       scrollZoom: false,
@@ -38,7 +38,7 @@ class Mapbox extends Nanocomponent {
     if (this.coords !== coords.slice(0, 2) || this.zoom !== coords[2]) {
       this.coords = coords.slice(0, 2)
       this.zoom = coords[2]
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: innerWidth > 420 ? this.zoom : this.zoom - 1, center: this.coords })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: window.innerWidth > 420 ? this.zoom : this.zoom - 1, center: this.coords })
       return true
     }
     return false
@@ -50,7 +50,7 @@ class Mapbox extends Nanocomponent {
 
     onIdle(() => {
       this.map.resize()
-      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: innerWidth > 420 ? this.zoom : this.zoom - 1 })
+      this.map.easeTo({ bearing: 360, pitch: 30, duration: ANIMDURATION, zoom: window.innerWidth > 420 ? this.zoom : this.zoom - 1 })
     })
   }
 }
