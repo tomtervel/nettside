@@ -1,21 +1,6 @@
-tittel: Velkommen til Tomter vels nettside!
-----
-kart:
-  - 11
-  - 59.6620965
-  - 13.5
-----
-beskrivelse:
-Tomter vel ble registrert som selvstendig juridisk enhet i frivilligregisteret __12.07.2017__. Stiftelsesdato for Tomter vel er __15.07.1947__ og mye dokumentasjon fra virksomheten siden den gang er lagret. Nettstedet er opprettet i august 2017 samt e-postadresse tilknyttet organisasjonen.
-
-## Årsmøte for 2020 er planlagt 25. februar. 
-Sakspapirer blir gjort tilgjengelig her i løpet av uke 6. Forslag sendes på epost eller kan leveres til et av styrets medlemmer. Forslag må være inne senest to uker før årsmøtet.
-
-## Julegrantenning søndag 1. desember klokken 17.
-
-## LESERBREV i Smaalenenes avis torsdag 7. november 2019.
-# BUDSJETTET I INDRE ØSTFOLD KOMMUNE
-## Penger skal spares
+LESERBREV i Smaalenenes avis torsdag 7. november 2019.
+BUDSJETTET I INDRE ØSTFOLD KOMMUNE
+##Penger skal spares
 INNBYGGERTORG PÅ Tomter,
 fra pilotprosjekt til skrinlegging? Vi kan neppe tro at dette
 er seriøst ment som et alternativ for å få budsjettene til å gå i
@@ -37,22 +22,3 @@ skal unngås. Sykling og gange skal prioriteres, behovet for bilkjøring minimal
 VI TRENGER en positiv dialog og utvikling ellers blir det meget vanskelig å få tilhørighet til nye Indre Østfold kommune (mange er skeptiske nok fra før,
 så dette må tas på alvor).
 STYRET I TOMTER VEL
-
-## Vi har ny leder for arrangementskomitéen!
-Tove Bremnes har tatt over etter Gunn Elisabeth Støkken Leren. 
-Vi takker Gunn Elisabeth for veldig fin og engasjert innsats siden oppstart av "Fremtidens Tomter" i 2016 og inn i Tomter vel siden 2017.
-
-Tove har vært aktiv i flere lag og har bidratt i årets 17. mai-arrangement. Tove ønskes lykke til med oppgavene med Tomters arrangementer fremover. 
-
-----
-footer:
-### Bidrag er ønskelig! Vil du delta i komitéer eller styrearbeide så gi oss et hint.
-
-Vi ønsker at Tomter vel skal være et effektivt organ for Tomters innbyggere. For saker som angår vårt felles bosted så trenger vi aktive innbyggere som bryr seg. Har du en sak du ønsker å ta opp, eller en sak du vil delta i, så meld fra på e-post til [post@tomtervel.no](mailto:post@tomtervel.no "Skriv epost").
-
-Økonomiske bidrag og årskontingent kan betales til vår Vipps konto __500396__.
-
-Tomter vel er registrert hos norsk Tipping og mottar grasrotandel. Husk å [registrer deg](https://www.norsk-tipping.no).
-
-<small>Om du savner informasjon eller har annen tilbakemelding for nettsiden kan du [opprette en henvendelse på github](https://www.github.com/tomtervel/nettside/issues/new).</small>
-
