@@ -6,6 +6,7 @@ kart:
   - 13.5
 ----
 beskrivelse:
+<<<<<<< HEAD
 Tomter vel ble registrert som selvstendig juridisk enhet i frivilligregisteret __12.07.2017__. Stiftelsesdato for Tomter vel er __15.07.1947__ og mye dokumentasjon fra virksomheten siden den gang er lagret. Nettstedet er opprettet i august 2017 samt e-postadresse tilknyttet organisasjonen.
 
 # Årsmøte for 2020 er planlagt snarest etter 15. mars. 
@@ -40,12 +41,16 @@ Tove Bremnes har tatt over etter Gunn Elisabeth Støkken Leren.
 Vi takker Gunn Elisabeth for veldig fin og engasjert innsats siden oppstart av "Fremtidens Tomter" i 2016 og inn i Tomter vel siden 2017.
 
 Tove har vært aktiv i flere lag og har bidratt i årets 17. mai-arrangement. Tove ønskes lykke til med oppgavene med Tomters arrangementer fremover. 
+=======
+>>>>>>> bde5c785388bca717e01b1ba206e18acc21d883f
 
 ----
 footer:
 ### Bidrag er ønskelig! Vil du delta i komitéer eller styrearbeide så gi oss et hint.
 
 Vi ønsker at Tomter vel skal være et effektivt organ for Tomters innbyggere. For saker som angår vårt felles bosted så trenger vi aktive innbyggere som bryr seg. Har du en sak du ønsker å ta opp, eller en sak du vil delta i, så meld fra på e-post til [post@tomtervel.no](mailto:post@tomtervel.no "Skriv epost").
+
+Tomter vel ble registrert som selvstendig juridisk enhet i frivilligregisteret __12.07.2017__. Stiftelsesdato for Tomter vel er __15.07.1947__ og mye dokumentasjon fra virksomheten siden den gang er lagret. Nettstedet er opprettet i august 2017 samt e-postadresse tilknyttet organisasjonen.
 
 Økonomiske bidrag og årskontingent kan betales til vår Vipps konto __500396__.
 

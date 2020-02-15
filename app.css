@@ -85,6 +85,15 @@ footer a, footer a:hover, footer a:visited {
 .invisible {
   visibility: hidden;
 }
+.grid {
+  display: grid;
+}
+.gtc-repeat {
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+}
+.gg4 {
+  grid-gap: 2rem;
+}
 .object-contain {
   object-fit: contain;
 }
