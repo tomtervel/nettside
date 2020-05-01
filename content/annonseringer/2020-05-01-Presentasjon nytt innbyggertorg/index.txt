@@ -1,4 +1,10 @@
 tittel: Presentasjon av nytt innbyggertorg
+--------
+kart:
+  - 11.001576695
+  - 59.658895508
+  - 20
 ----
+
 beskrivelse: I kommunens glasscontainer utenfor biblioteket har det nå kommet en presentasjon av de planer som foreligger for innbyggertorg og ny bebyggelse rundt Tomter torg. Ta en titt!
 
