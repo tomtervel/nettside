@@ -6,5 +6,6 @@ kart:
   - 17
 ----
 
-beskrivelse: I kommunens glasscontainer utenfor biblioteket har det nå kommet en presentasjon av de planer som foreligger for innbyggertorg og ny bebyggelse rundt Tomter torg. Ta en titt!
+beskrivelse: 
+I kommunens glasscontainer utenfor biblioteket har det nå kommet en presentasjon av de planer som foreligger for innbyggertorg og ny bebyggelse rundt Tomter torg. Ta en titt!
 
