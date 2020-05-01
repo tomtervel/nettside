@@ -1,5 +1,5 @@
 tittel: Presentasjon av nytt innbyggertorg
---------
+----
 kart:
   - 11.001576695
   - 59.658895508
