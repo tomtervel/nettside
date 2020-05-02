@@ -4,10 +4,10 @@ module.exports = headertags
 
 function headertags (opts) {
   return hyperstream({
-    'head': {
+    head: {
       _appendHtml: `
-        <link href='//api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
-        <script src='//api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js' defer onload="window.mapboxgl.accessToken='${process.env.MAPBOX_TOKEN}'"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js' defer onload="window.mapboxgl.accessToken='${process.env.MAPBOX_TOKEN}'"></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
       `
     }
   })
