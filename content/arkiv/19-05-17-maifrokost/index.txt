@@ -1,8 +1,8 @@
 tittel: 17. maifeiring 🇳🇴
 ----
 kart:
-  - 11.003359
-  - 59.658424
+  - 11.00000000
+  - 59.66000000
   - 17
 ----
 dato: Nationaldagen ble feiret med frokost på skolen!

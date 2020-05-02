@@ -3,9 +3,9 @@ tittel: Årsmøte for 2020
 dato: Ultimo mai
 ----
 kart:
-  -11.002316
-  -59.66
-  -20
+  -11.0000000
+  -59.6600000
+  -19
 ---- 
 beskrivelse: 
 Årsmøtet var satt til 16. mars på Tomter Cafe og Bar klokken 18:30. 
