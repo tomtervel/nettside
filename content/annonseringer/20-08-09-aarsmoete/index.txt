@@ -1,0 +1,11 @@
+tittel: Årsmøte for 2020
+----
+dato: ikke gjennomført på vårhalvåret.
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 18
+---- 
+beskrivelse:
+Årsmøtet post coronautsettelse blir 20. august. hurra skriv mer. jodda
