@@ -16,27 +16,27 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "bankai": "^9.15.0",
-    "brfs": "^1.4.3",
-    "choo": "^6.13.1",
-    "choo-devtools": "^2.5.1",
+    "bankai": "^9.15.3",
+    "brfs": "^2.0.2",
+    "choo": "^7.1.0",
+    "choo-devtools": "^3.0.4",
     "choo-persist": "^3.0.2",
-    "choo-service-worker": "^2.4.0",
-    "dotenv": "^5.0.0",
+    "choo-service-worker": "^3.0.0",
+    "dotenv": "^8.2.0",
     "envify": "^4.1.0",
     "hstream": "^1.2.0",
-    "markdown-it": "^8.4.2",
-    "nanocomponent": "^6.4.2",
+    "markdown-it": "^11.0.0",
+    "nanocomponent": "^6.5.3",
     "nanocontent": "^0.4.6",
     "nanopage": "0.2.0",
     "on-idle": "^3.1.4",
-    "sheetify": "^7.3.3",
-    "tachyons": "^4.11.1"
+    "sheetify": "^8.0.0",
+    "tachyons": "^4.12.0"
   },
   "devDependencies": {
-    "dependency-check": "^3.2.1",
-    "minify-stream": "1.1.*",
-    "standard": "^14.0.0-1"
+    "dependency-check": "^4.1.0",
+    "minify-stream": "^2.0.1",
+    "standard": "^14.3.4"
   },
   "eslintConfig": {
     "extends": "standard",
