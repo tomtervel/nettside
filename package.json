@@ -24,7 +24,7 @@
     "choo-service-worker": "^3.0.0",
     "dotenv": "^8.2.0",
     "envify": "^4.1.0",
-    "hstream": "^1.2.0",
+    "hstream": "2",
     "markdown-it": "^11.0.0",
     "nanocomponent": "^6.5.3",
     "nanocontent": "^0.4.6",
