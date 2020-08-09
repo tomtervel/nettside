@@ -4,7 +4,7 @@
     "deps": "dependency-check . --missing --unused --no-dev -i choo-service-worker -i envify -i hstream -i tachyons -i bankai -i brfs -i dependency-check -i minify-stream -i standard",
     "start": "bankai start",
     "build": "bankai build index.js ./dist",
-    "test": "standard --fix && npm run deps && node testserver.js"
+    "test": "npm run deps && node testserver.js"
   },
   "main": "index.js",
   "engine": {
