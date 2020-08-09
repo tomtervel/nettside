@@ -60,6 +60,9 @@ footer a, footer a:hover, footer a:visited {
 .vel-blue {
   color: var(--vel-blue, rgb(23, 133, 194));
 }
+.sticky {
+  position: sticky;
+}
 .skew-y {
   transform: skewY(-1.5deg);
 }

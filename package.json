@@ -1,10 +1,10 @@
 {
   "name": "tomtervel",
   "scripts": {
-    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "deps": "dependency-check . --missing --unused --no-dev -i choo-service-worker -i envify -i hstream -i tachyons -i bankai -i brfs -i dependency-check -i minify-stream -i standard",
     "start": "bankai start",
     "build": "bankai build index.js ./dist",
-    "test": "standard && npm run deps && node test.js"
+    "test": "standard --fix && npm run deps && node testserver.js"
   },
   "main": "index.js",
   "engine": {
@@ -16,11 +16,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "bankai": "^9.15.3",
-    "brfs": "^2.0.2",
     "choo": "^7.1.0",
     "choo-devtools": "^3.0.4",
-    "choo-persist": "^3.0.2",
     "choo-service-worker": "^3.0.0",
     "dotenv": "^8.2.0",
     "envify": "^4.1.0",
@@ -34,6 +31,8 @@
     "tachyons": "^4.12.0"
   },
   "devDependencies": {
+    "bankai": "^9.15.3",
+    "brfs": "^2.0.2",
     "dependency-check": "^4.1.0",
     "minify-stream": "^2.0.1",
     "standard": "^14.3.4"

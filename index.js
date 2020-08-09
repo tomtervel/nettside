@@ -38,6 +38,7 @@ for (var path in content) {
 
 app.use(wrapper(content))
 app.use(init)
+if (process.env.NODE_ENV === 'test') app.use(visualVerification)
 app.route('*', mainView)
 
 module.exports = app.mount('body')
@@ -54,6 +55,25 @@ function init (state, emitter) {
   })
 }
 
+function visualVerification (state, emitter) {
+  Object.assign(state, { testmode: true })
+  Object.assign(state.events, { VERIFY_TEST: 'VERIFY_TEST' })
+  emitter.once(state.events.DOMCONTENTLOADED, () => {
+    app.route('/verified', verified)
+    emitter.once(state.events.VERIFY_TEST, (pass) => {
+      if (pass) window.fetch('/test/pass')
+      else window.fetch('/test/fail')
+    })
+  })
+  function verified (state, emit) {
+    return html`
+      <body>
+        <h1 class="tc">Takk, Verifisert</h1>
+        <h3 class="tc">Test-procesesen er ferdig</h3>
+      </body>`
+  }
+}
+
 function wrapper (siteContent) {
   return function (state, emitter, app) {
     state.content = Object.assign({}, siteContent)
@@ -65,11 +85,23 @@ function mainView (state, emit) {
   var tittel = state.content[state.href || '/'] ? state.content[state.href || '/'].tittel : '404'
   emit(state.events.DOMTITLECHANGE, `${state.site}${tittel ? ` | ${tittel}` : ''}`)
   return html`
-    <body class="vh-100 flex flex-column justify-between items-center bg-washed-yellow black sans-serif">
+    <body class="relative flex flex-column justify-between items-center bg-washed-yellow black sans-serif">
+      ${banner(state, emit)}
       ${header(state, emit)}
       ${contentView(state, emit)}
       ${footer(state.content['/'].footer)}
     </body>
+  `
+}
+
+function banner (state, emit) {
+  if (!state.testmode) return null
+  return html`
+    <div class="h-2 w-100 sticky top-0 z-4 flex pa2 bg-white justify-center bg-light-pink bold">
+      <span>For at dine endringer skal bli lagt til må du visuelt verifisere endringene.</span>
+      <a href="/verified" onclick=${() => emit(state.events.VERIFY_TEST, true)} class="link b green mh2">Ja, her ser det bra ut.</a>
+      <a href="/verified" onclick=${() => emit(state.events.VERIFY_TEST, false)} class="link b red mh2">Nei, her må det mere til.</a>
+    </div>
   `
 }
 
@@ -114,33 +146,33 @@ function contentView (state, emit) {
           </section>
           ${page.path.includes('komiteer') ? html`<a href="mailto:post+${encodeURIComponent(page.tittel.toLowerCase())}@tomtervel.no?subject=Inspill%20til%20${page.tittel}>Ta kontakt</a>` : null}
           ${page.url === '/'
-            ? [
-              html`
+        ? [
+          html`
               <section rel="komiteer" class="mt4">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Vi har komiteer for</h1>
                 </div>
                 <ul class="grid gg4 gtc-repeat justify-between items-baseline list pl0 mt4">${
-                  state.page('/komiteer').children()
-                    .sortBy('tittel', 'asc').toArray()
-                    .filter(page => !page.avsluttet)
-                    .map(frontedContent)
-                }</ul>
+            state.page('/komiteer').children()
+              .sortBy('tittel', 'asc').toArray()
+              .filter(page => !page.avsluttet)
+              .map(frontedContent)
+            }</ul>
               </section>
               `,
-              state.page('/annonseringer').children().toArray().length > 0 ? html`
+          state.page('/annonseringer').children().toArray().length > 0 ? html`
               <section rel="annonseringer">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
                 </div>${
-                  state.page('/annonseringer').children()
-                    .sortBy('tittel', 'asc').toArray()
-                    .map(pageListing)
-              }</section>` : null
-            ]
-            : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
+            state.page('/annonseringer').children()
+              .sortBy('tittel', 'asc').toArray()
+              .map(pageListing)
+            }</section>` : null
+        ]
+        : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
     `
@@ -212,10 +244,10 @@ function pageListing (page) {
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null}
       <section class="flex flex-wrap items-center" rel="images">${
-        images.map(function (image) {
-          return html`<img class="object-contain" src=${image.path} />`
-        })
-      }</section>
+    images.map(function (image) {
+      return html`<img class="object-contain" src=${image.path} />`
+    })
+    }</section>
       ${raw(md.render(page.beskrivelse))}
       <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
     </section> 
