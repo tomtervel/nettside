@@ -1,6 +1,6 @@
 tittel: Årsmøte for 2020. Vi prøver igjen i september.
 ----
-dato: ikke gjennomført på vårhalvåret.
+dato: Utsatt siden vårhalvåret.
 ----
 kart:
   - 10.999878854
