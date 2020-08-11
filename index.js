@@ -68,8 +68,8 @@ function visualVerification (state, emitter) {
   function verified (state, emit) {
     return html`
       <body>
-        <h1 class="tc">Takk, Verifisert</h1>
-        <h3 class="tc">Test-procesesen er ferdig</h3>
+        <h1 class="tc">Verifisert</h1>
+        <h3 class="tc">Takk skal du ha!</h3>
       </body>`
   }
 }
