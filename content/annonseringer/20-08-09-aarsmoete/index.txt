@@ -1,4 +1,4 @@
-tittel: Årsmøte for 2020. Vi prøver igjen i september.
+tittel: Årsmøte for 2020. Vi prøver igjen i oktober.
 ----
 dato: Utsatt siden vårhalvåret.
 ----
@@ -8,4 +8,4 @@ kart:
   - 18
 ---- 
 beskrivelse:
-Årsmøtet post Koronautsettelse blir 7. september, på Tomter Cafe og Bar klokken 19. Nytt budsjett og forslag til vedtekstendring blir lagt ut innen 12. august.
+Årsmøtet post Koronautsettelse blir i oktober. Nytt budsjett og forslag til vedtekstendring blir lagt ut etter neste styremøte, 21. september.
