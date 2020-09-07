@@ -87,6 +87,5 @@ Vi håper mange vil bidra!
 Elvestigruppen i Tomter Vel består av
 _Alexander Savert_,
 _Marianne Aagaard_,
-_Knut Erik Grøholt_,
-_Hans Kristian Jensen_ og
-_Anna Undén_
+_Knut Erik Grøholt_ og
+_Hans Kristian Jensen_.
