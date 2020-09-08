@@ -5,8 +5,8 @@ const { spawnSync } = require('child_process')
 
 process.env.NODE_ENV = 'test'
 
-var compiler = bankai(path.join(__dirname, 'index.js'))
-var server = http.createServer(function (req, res) {
+const compiler = bankai(path.join(__dirname, 'index.js'))
+const server = http.createServer(function (req, res) {
   if (req.url === '/test/pass') {
     process.exit(0)
   } else if (req.url === '/test/fail') {
@@ -20,5 +20,5 @@ var server = http.createServer(function (req, res) {
 
 server.listen(8080, function () {
   const { error } = spawnSync('open "http://localhost:8080"')
-  if (error) console.log('server running at http://localhost:8080')
+  if (error) console.log('Couldn\'t open browser, please go to http://localhost:8080\n', error)
 })

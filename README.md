@@ -14,4 +14,4 @@ For øyeblikket eksisterer det støtte for disse feltene:
 * `beskrivelse` - Markdown _obligatorisk_
 * `dato` - formaterings agnostisk tekst felt
 
-Sjekk ut en del exempler for bruk av [markdown syntaksen](https://ungoldman.github.io/style.css/guide.html)
+Sjekk ut en del exempler for bruk av [markdown syntaksen](https://www.markdownguide.org/basic-syntax)
