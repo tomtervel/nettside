@@ -61,15 +61,19 @@ function visualVerification (state, emitter) {
   emitter.once(state.events.DOMCONTENTLOADED, () => {
     app.route('/verified', verified)
     emitter.once(state.events.VERIFY_TEST, (pass) => {
-      if (pass) window.fetch('/test/pass')
-      else window.fetch('/test/fail')
+      if (pass) {
+        state.testmode = 'success'
+        window.fetch('/test/pass')
+      } else {
+        state.testmode = 'fail'
+        window.fetch('/test/fail')
+      }
     })
   })
   function verified (state, emit) {
     return html`
       <body>
-        <h1 class="tc">Verifisert</h1>
-        <h3 class="tc">Takk skal du ha!</h3>
+        <h1 class="tc">${state.testmode === 'success' ? 'Godt jobba!' : 'Til lykke med forbedringene.'}</h1>
       </body>`
   }
 }
