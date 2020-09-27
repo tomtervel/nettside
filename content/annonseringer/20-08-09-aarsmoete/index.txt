@@ -1,6 +1,6 @@
-tittel: Årsmøte for 2020. Vi prøver igjen i oktober.
+tittel: Årsmøte for 2020 holdes på Tomter Cafe og Bar
 ----
-dato: Utsatt siden vårhalvåret.
+dato: 19. oktover 2020, klokken 18:30
 ----
 kart:
   - 10.999878854
@@ -8,4 +8,4 @@ kart:
   - 18
 ---- 
 beskrivelse:
-Årsmøtet post Koronautsettelse blir i oktober. Nytt budsjett og forslag til vedtekstendring blir lagt ut etter neste styremøte, 21. september.
+Årsmøtet post Koronautsettelse er nå fastsatt i oktober. Nytt budsjett og forslag til vedtekstendring er lagt ut nå.
