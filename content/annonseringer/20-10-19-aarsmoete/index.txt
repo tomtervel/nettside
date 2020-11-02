@@ -1,6 +1,6 @@
 tittel: Årsmøte for 2020 ble holdt på Tomter Cafe og Bar
 ----
-dato: 19. oktover 2020, klokken 18:30–19:45
+dato: 19. oktober 2020, klokken 18:30–19:45
 ----
 kart:
   - 10.999878854
