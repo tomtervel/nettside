@@ -5,7 +5,7 @@ kart:
   - 59.6631
   - 17
 ----
-dato: oppdatert Juni 2019
+dato: oppdatert november 2020
 ----
 beskrivelse:
 Tomter Vel engasjerer en prosjektgruppe som arbeider med å etablere en elvesti
