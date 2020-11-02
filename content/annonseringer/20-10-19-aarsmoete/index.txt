@@ -1,0 +1,13 @@
+tittel: Årsmøte for 2020 ble holdt på Tomter Cafe og Bar
+----
+dato: 19. oktover 2020, klokken 18:30–19:45
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 18
+---- 
+beskrivelse:
+Årsmøtet post Koronautsettelse ble fastsatt i oktober. Nytt budsjett og forslag til vedtekstendring ble vedtatt.
+Det kom inn ett forslag, oppretting av lekeplasskomité.
+Vi opprettet en komité for lekeplass og benkeplass.
