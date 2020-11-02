@@ -5,6 +5,5 @@ node_modules
 dist
 package-lock.json
 _npx
-shrinkwrap.yaml
 *.bbprojectd
 klingenbergbygg/
