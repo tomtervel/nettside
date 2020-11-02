@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "engine": {
-    "node": "6.x.x"
+    "node": "12.x.x"
   },
   "repository": {
     "type": "git",
