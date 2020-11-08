@@ -17,6 +17,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bankai": "^9.15.3",
+    "brfs": "^2.0.2",
     "choo": "^7.1.0",
     "choo-devtools": "^3.0.4",
     "choo-service-worker": "^3.0.0",
@@ -24,6 +25,7 @@
     "envify": "^4.1.0",
     "hstream": "2",
     "markdown-it": "^11.0.0",
+    "minify-stream": "^2.0.1",
     "nanocomponent": "^6.5.3",
     "nanocontent": "^0.4.6",
     "nanopage": "0.2.0",
@@ -32,9 +34,7 @@
     "tachyons": "^4.12.0"
   },
   "devDependencies": {
-    "brfs": "^2.0.2",
     "dependency-check": "^4.1.0",
-    "minify-stream": "^2.0.1",
     "standard": "^14.3.4"
   },
   "eslintConfig": {
