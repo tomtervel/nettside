@@ -1,0 +1,12 @@
+tittel: Tenning av julegrana for 2020
+----
+kart:
+  - 11.0054
+  - 59.6601
+  - 18
+----
+dato: 29 november 2020
+----
+beskrivelse:
+## Grana tennes, men det kommer ingen nisse i år.
+Vi setter opp julegran og setter på lys. Vi skal prøve å få til litt ekstra julepynt i sentrum. Jobber med hva det kan bli.
