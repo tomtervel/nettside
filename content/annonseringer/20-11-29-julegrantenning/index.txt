@@ -1,8 +1,8 @@
 tittel: Tenning av julegrana for 2020
 ----
 kart:
-  - 10.99988
-  - 59.66024460
+  - 11.00050
+  - 59.66000
   - 18
 ----
 dato: 29. november 2020
