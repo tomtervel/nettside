@@ -1,11 +1,11 @@
 tittel: Tenning av julegrana for 2020
 ----
 kart:
- - 10.99988
- - 59.66024460
- - 18
+  - 10.99988
+  - 59.66024460
+  - 18
 ----
-dato: 29 november 2020
+dato: 29. november 2020
 ----
 beskrivelse:
 ## Grana tennes, men det kommer ingen nisse i år.
