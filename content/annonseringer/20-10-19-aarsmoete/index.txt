@@ -6,7 +6,7 @@ kart:
   - 10.999878854
   - 59.660244637
   - 18
----- 
+----
 beskrivelse:
 Årsmøtet post Koronautsettelse ble fastsatt i oktober. Nytt budsjett og forslag til vedtekstendring ble vedtatt.
 Det kom inn ett forslag, oppretting av lekeplasskomité.
