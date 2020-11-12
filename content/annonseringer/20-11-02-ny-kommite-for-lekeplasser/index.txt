@@ -1,0 +1,11 @@
+tittel: Ny komité for leke- og møteplasser
+----
+dato: 02. oktober 2020
+----
+kart:
+  - 11.00050
+  - 59.66000
+  - 15
+----
+beskrivelse:
+Årsmøte har etablert en komité for lekeplasser. Det er en økning i småbarnsforeldre i Tomter og dette skaper et behov for plasser tilrettelagt for de små tomtringene våre. Leder for komitéen er Susanne Lund-Høie. Komitéen etablerer seg og vil komme med tiltak ettesom det kommer inn innspill. Arbeidet vil skje i samråd med naboer og unge.
