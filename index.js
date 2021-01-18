@@ -193,7 +193,7 @@ function mapView (coords, component) {
 
 function header (state, emit) {
   return html`
-    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-row justify-between z-2">
+    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-row justify-between z-2" style="min-height: 5vmax;">
       <h1 class="flex items-center ma0 h3 h3-l">
         <img
           class="logo h2 h3-ns ${state.href ? 'pointer' : 'active'}"
