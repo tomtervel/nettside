@@ -37,11 +37,11 @@ for (var path in content) {
   app.route(path, mainView)
 }
 
-app.use(require('choo-service-worker')())
 app.use(wrapper(content))
 app.use(init)
 if (process.env.NODE_ENV === 'test') app.use(visualVerification)
 app.route('*', mainView)
+app.use(require('choo-service-worker')())
 
 module.exports = app.mount('body')
 
