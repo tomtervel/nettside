@@ -127,7 +127,7 @@ function contentView (state, emit) {
   return [
     html`<div 
       class="${Array.isArray(page.kart) || 'dn'} skew-y origin-top-left h4 bg-washed-yellow w-100 z-1" 
-      style="margin-top: -8rem; margin-bottom: -5em;">
+        style="margin-top: -8rem; margin-bottom: -5em; min-height: 5vmax;">
     </div>`,
     mapView(page.kart, tomterMap),
     html`
@@ -195,7 +195,7 @@ function mapView (coords, component) {
 
 function header (state, emit) {
   return html`
-    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-row justify-between z-2" style="min-height: 5vmax;">
+    <header class="relative mw8 w-100 pa4-ns pv4-l ph5-l pa2 pv3 unselectable flex flex-row justify-between z-2">
       <h1 class="flex items-center ma0 h3 h3-l">
         <img
           class="logo h2 h3-ns ${state.href ? 'pointer' : 'active'}"
