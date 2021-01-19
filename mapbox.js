@@ -45,7 +45,6 @@ class Mapbox extends Nanocomponent {
   }
 
   beforerender (el) {
-    console.log(this.coords)
     this.map.setCenter(this.coords)
 
     onIdle(() => {
