@@ -25,7 +25,6 @@ css('tachyons')
 css('./app.css')
 
 if (process.env.NODE_ENV !== 'production') {
-  app.use(require('choo-service-worker/clear')())
   app.use(require('choo-devtools')({
     filter: function (event) {
       return event !== 'DOMTitleChange'
@@ -41,8 +40,7 @@ app.use(wrapper(content))
 app.use(init)
 if (process.env.NODE_ENV === 'test') app.use(visualVerification)
 app.route('*', mainView)
-app.use(require('choo-service-worker')())
-
+app.use(require('choo-service-worker/clear')())
 module.exports = app.mount('body')
 
 function init (state, emitter) {
