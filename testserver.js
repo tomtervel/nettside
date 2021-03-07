@@ -1,7 +1,8 @@
 const bankai = require('bankai/http')
 const http = require('http')
 const path = require('path')
-const osascript = require('node-osascript');
+const osascript = require('node-osascript')
+const { spawnSync } = require('child_process')
 
 process.env.NODE_ENV = 'test'
 
@@ -19,7 +20,12 @@ const server = http.createServer(function (req, res) {
 })
 
 server.listen(8080, function () {
-  osascript.execute('tell application "Safari" to make new document with properties {URL:"http://localost:8080"}', function (err, result, raw) {
-    if (err) throw err
-  })
+  if (process.platform === 'darwin') {
+    osascript.execute('tell application "Safari" to open location "http://localhost:8080/"', function (err, result) {
+      if (err) throw err
+    })
+  } else {
+    const { error } = spawnSync('open "http://localhost:8080/"')
+    if (error) throw error
+  }
 })
