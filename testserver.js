@@ -19,9 +19,11 @@ const server = http.createServer(function (req, res) {
 })
 
 server.listen(8080, function () {
-  const { error } = spawnSync('osascript -e \'tell application "Safari" to activate\ntell application "Safari" to open location "http://localhost:8080"\'')
+  const { error } = spawnSync(`
+    osascript -e 'tell application "Safari" to make new document with properties {URL:"http://localost:8080"}'
+  `)
   if (error) {
-    process.exit(1, error)
     console.log('No browser, please go to http://localhost:8080 to verify\n', error)
+    process.exit(1)
   }
 })
