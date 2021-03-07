@@ -1,7 +1,7 @@
 const bankai = require('bankai/http')
 const http = require('http')
 const path = require('path')
-const { spawnSync } = require('child_process')
+const osascript = require('node-osascript');
 
 process.env.NODE_ENV = 'test'
 
@@ -19,11 +19,7 @@ const server = http.createServer(function (req, res) {
 })
 
 server.listen(8080, function () {
-  const { error } = spawnSync(`
-    osascript -e 'tell application "Safari" to make new document with properties {URL:"http://localost:8080"}'
-  `)
-  if (error) {
-    console.log('No browser, please go to http://localhost:8080 to verify\n', error)
-    process.exit(1)
-  }
+  osascript.execute('tell application "Safari" to make new document with properties {URL:"http://localost:8080"}', function (err, result, raw) {
+    if (err) throw err
+  })
 })
