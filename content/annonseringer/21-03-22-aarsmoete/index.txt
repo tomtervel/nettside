@@ -1,0 +1,17 @@
+tittel: Årsmøte for 2021 blir holdt på Tomter Cafe og Bar
+----
+dato: 22. mars 2021, klokken 18:30–19:45
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 18
+----
+beskrivelse:
+Vi prøver oss med ordinær gjennomføring, på tross av Corona. Hvis vi blir fler enn ti, trekker vi ut.
+ Da blir grensen 20. Så mange har vi ikke vært på mange år, så dette bør holde og alle er velkomne. 
+
+Styret ønsker en valgkomité, som kan hjelpe oss å få kandidater til styrets funksjoner. 
+
+Revisor er også en funksjon som vedtektene foreskriver og vi må klare oss uten. 
+
