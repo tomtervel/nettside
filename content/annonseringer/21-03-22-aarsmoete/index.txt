@@ -1,4 +1,5 @@
-tittel: Årsmøte for 2021 blir holdt på Tomter Cafe og Bar
+tittel: Årsmøte for 2021 blir ikke holdt på Tomter Cafe og Bar!
+Årsmøtet holdes på Zoom. Bestill lenke på e-post.
 ----
 dato: 22. mars 2021, klokken 18:30–19:45
 ----
@@ -8,8 +9,7 @@ kart:
   - 18
 ----
 beskrivelse:
-Vi prøver oss med ordinær gjennomføring, på tross av Corona. Hvis vi blir fler enn ti, trekker vi ut.
- Da blir grensen 20. Så mange har vi ikke vært på mange år, så dette bør holde og alle er velkomne. 
+Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging et par timer før møtet, og alle er velkomne. 
 
 Styret ønsker en valgkomité, som kan hjelpe oss å få kandidater til styrets funksjoner. 
 
