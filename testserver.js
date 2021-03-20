@@ -24,7 +24,7 @@ const server = http.createServer(function (req, res) {
 server.listen(8080, function () {
   console.log('Server started, your browser should open to "http://localhost:8080"')
   if (process.platform === 'darwin') {
-    osascript.execute('tell application "Safari" to open location "http://localhost:8080/"', function (err, result) {
+    osascript.execute('tell application "Google Chrome" to open location "http://localhost:8080/"', function (err, result) {
       if (err) throw err
     })
   } else {
