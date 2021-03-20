@@ -1,6 +1,8 @@
-tittel: Årsmøte for 2021 holdes på Zoom. Bestill lenke på e-post.
+tittel: 
+Årsmøte for 2021 holdes på Zoom. Bestill lenke på e-post.
 ----
-dato: Uavklart Tidspunkt
+dato: 
+Uavklart Tidspunkt
 ----
 kart:
   - 10.999878854
@@ -9,6 +11,8 @@ kart:
 ----
 beskrivelse:
 Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging et par timer før møtet, og alle er velkomne. 
+
+Bestilling av lenke blir behandlet når tid for nytt møte er fastsatt av styret. 
 
 Styret ønsker en valgkomité, som kan hjelpe oss å få kandidater til styrets funksjoner. 
 
