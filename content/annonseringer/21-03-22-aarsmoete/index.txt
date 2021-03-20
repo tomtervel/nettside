@@ -1,7 +1,6 @@
-tittel: Årsmøte for 2021 blir ikke holdt på Tomter Cafe og Bar!
-Årsmøtet holdes på Zoom. Bestill lenke på e-post.
+tittel: Årsmøte for 2021 holdes på Zoom. Bestill lenke på e-post.
 ----
-dato: Uavklart! 22. mars 2021, klokken 18:30–19:45. 
+dato: Uavklart Tidspunkt
 ----
 kart:
   - 10.999878854
