@@ -7,7 +7,7 @@ mandag 12. april 2021, klokken 18:30
 kart:
   - 10.999878854
   - 59.660244637
-  - 10
+  - 13,5
 ----
 beskrivelse:
 Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging en uke før møtet, og alle er velkomne. Vi åpner forbindelsen til møtet en halv time før for å håndtere spørsmål til oppkoblingen. 
