@@ -1,8 +1,8 @@
 tittel: 
-Årsmøte for 2021 holdes på Zoom. Bestill lenke på e-post.
+Årsmøte for 2021 holdes på Zoom. Åpningsforedrag ved rektor Hanne Nordby, som informerer om skoleutviklingsplan, vest for Glomma.
 ----
 dato: 
-Uavklart Tidspunkt
+mandag 12. april 2021, klokken 18:30
 ----
 kart:
   - 10.999878854
@@ -10,11 +10,10 @@ kart:
   - 18
 ----
 beskrivelse:
-Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging to uker før møtet, og alle er velkomne. 
-
-Bestilling av lenke blir behandlet når tid for nytt møte er fastsatt av styret. 
+Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging en uke før møtet, og alle er velkomne. Vi åpner forbindelsen til møtet en halv time før for å håndtere spørsmål til oppkoblingen. 
 
 Styret ønsker en valgkomité, som kan hjelpe oss å få kandidater til styrets funksjoner. 
 
 Vi ønsker Grete Nordlien Asker velkommen som revisor for Tomter vel, og takker for årets revisjon!
 
+Last ned papirer til årsmøtet ved å gå inn på artikkelen og lenke for papirene er tilgjengelig nederst.
