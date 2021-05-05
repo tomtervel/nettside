@@ -10,7 +10,7 @@ kart:
   - 13.5
 ----
 beskrivelse:
-Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en e-post til <post@tomtervel.no>. Vi sender ut en e-post med lenke for pålogging en uke før møtet, og alle er velkomne. Vi åpner forbindelsen til møtet en halv time før for å håndtere spørsmål til oppkoblingen. 
+Arrangementer som dette er ikke lov, hverken ute eller inne. Vi ber om at de som ønsker å delta sender en [e-post](mailto:post@tomtervel.no). Vi sender ut en e-post med lenke for pålogging en uke før møtet, og alle er velkomne. Vi åpner forbindelsen til møtet en halv time før for å håndtere spørsmål til oppkoblingen. 
 
 Påkoblingslenke er nå lagt rett ut og det er bare å følge instruks for påkobling. 
 Påkoblingslenke:
