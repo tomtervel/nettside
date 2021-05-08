@@ -1,0 +1,17 @@
+tittel: 
+Første runde med kvistkverning. Testprosjekt!
+----
+dato: 
+mandag 08. mai 2021, klokken 10–12
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 13.5
+----
+beskrivelse:
+Vi rigger opp traktor med kvistkvern og bil med henger. Kjører først Lyngveien opp og Knatrebakkveien ned. Deretter tar vi en runde i Symreveien og litt opp Tolfshusvein og breegneveien. Har vi tid, så kjører vi innom Hobølveien 10 og Engen før vi avslutter.
+
+Vi tar med noe flis til elvestien. Blir det store mengder noen steder må vi overlate det til kvist-eier eller de som ønsker dette til å fylle i bed.
+
+Gi tilbakemelding om noe ønskes anderledes!
