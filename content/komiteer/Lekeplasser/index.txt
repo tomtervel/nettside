@@ -1,6 +1,6 @@
 tittel: Ny komité for leke- og møteplasser
 ----
-dato: 02. oktober 2020
+dato: 11. mai 2021
 ----
 kart:
   - 11.00050
