@@ -1,0 +1,15 @@
+tittel: 
+Kommunen har hatt forslag til ny kommuneplan til høring
+----
+dato: 
+mandag 14. mai og 22. desember 2021
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 13.5
+----
+beskrivelse:
+
+Styret har laget et innspill for ny samfunnsdel til kommuneplan. Denne ble vedtatt den 15. juni 2021.
+Styret har også laget innspill til ny arealdel. Videre arbeide med arealdelen fortsetter i 2022.  Se våre innspill under komité for høringsinstans.
