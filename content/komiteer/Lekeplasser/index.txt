@@ -1,6 +1,6 @@
 tittel: Leke- og møteplasser
 ----
-dato: Opprettet 11. mai 2021
+dato: Offisiell åpning 11. september 2021
 ----
 kart:
   - 11.0028
