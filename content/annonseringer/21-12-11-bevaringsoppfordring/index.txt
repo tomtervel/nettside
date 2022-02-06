@@ -5,8 +5,8 @@ dato:
 mandag 11. desember 2021
 ----
 kart:
-  - 11.0004
-  - 59.6601
+  - 11.0006
+  - 59.6610
   - 20
 ----
 beskrivelse:
