@@ -7,7 +7,7 @@ lørdag 7. mai 2021, fra klokken 10.
 kart:
   - 11.0008
   - 59.6610
-  - 20
+  - 10
 ----
 beskrivelse:
 Elvestigruppen holder dugnad på lørdag! Oppmøte ved Art To Be. Ta gjerne med en jernrive, spade eller trillebår.
