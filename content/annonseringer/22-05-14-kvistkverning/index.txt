@@ -2,7 +2,7 @@ tittel:
 Årets første runde med kvistkverning.
 ----
 dato: 
-mandag 14. mai 2021, klokken 09–12
+mandag 14. mai 2021, klokken 09–12. Dato er foreløpig usikker!
 ----
 kart:
   - 10.999878854
