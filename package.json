@@ -21,10 +21,10 @@
     "choo": "^7.1.0",
     "choo-devtools": "^3.0.4",
     "choo-service-worker": "^3.0.0",
-    "dotenv": "^8.6.0",
+    "dotenv": "^16.0.2",
     "envify": "^4.1.0",
-    "hstream": "2",
-    "markdown-it": "^11.0.1",
+    "hstream": "^3.1.1",
+    "markdown-it": "^13.0.1",
     "minify-stream": "^2.1.0",
     "nanocomponent": "^6.6.0",
     "nanocontent": "^0.4.6",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "dependency-check": "^4.1.0",
     "node-osascript": "^2.1.0",
-    "standard": "^14.3.4"
+    "standard": "^17.0.0"
   },
   "eslintConfig": {
     "extends": "standard",
