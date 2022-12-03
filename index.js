@@ -1,6 +1,5 @@
 /* eslint-disable no-path-concat */
 require('dotenv').config()
-require('babel-polyfill')
 
 var assert = require('assert')
 var app = require('choo')()
@@ -171,9 +170,7 @@ function contentView (state, emit) {
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
-                </div>${
-            state.page('/annonseringer').children()
-              .sortBy('tittel', 'asc').toArray()
+                </div>${state.page('/annonseringer').children().toArray().sort((a,b) => a.name < b.name)
               .map(pageListing)
             }</section>` : null
         ]
