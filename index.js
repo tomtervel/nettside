@@ -1,5 +1,6 @@
 /* eslint-disable no-path-concat */
 require('dotenv').config()
+require('babel-polyfill')
 
 var assert = require('assert')
 var app = require('choo')()

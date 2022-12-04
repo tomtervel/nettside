@@ -1,8 +1,7 @@
 tittel: 
-Årets første runde med kvistkverning.
+Årets runde med kvistkverning ble ikke gjennomført.
 ----
 dato: 
-mandag 14. mai 2021, klokken 09–12. Dato er foreløpig usikker!
 ----
 kart:
   - 10.999878854
@@ -10,8 +9,8 @@ kart:
   - 13.5
 ----
 beskrivelse:
-Vi fikk en vellykket runde i 2021 med kvistkverning og gjentar denne. Ha kvisten klar utenfor og vi stopper og kverner det som ligger fremme.
-Vi rigger opp traktor med kvistkvern og bil med henger. Kjører først Lyngveien opp og Knatrebakkveien ned. Deretter tar vi en runde i Symreveien og litt opp Tolfshusveien og Bregneveien. Har vi tid, så kjører vi innom Hobølveien 10 og Engen før vi avslutter.
+Vi fikk en vellykket runde i 2021 med kvistkverning og gjentar denne til neste år. Ha kvisten klar utenfor og vi stopper og kverner det som ligger fremme.
+Vi rigget opp traktor med kvistkvern og bil med henger. Kjørte først Lyngveien opp og Knatrebakkveien ned. Deretter tok vi en runde i Symreveien og litt opp Tolfshusveien og Bregneveien. Har vi tid, så kjører vi innom Hobølveien 10 og Engen før vi avslutter.
 
-Vi tar med noe flis til elvestien. Blir det store mengder noen steder må vi overlate det til kvist-eier eller de som ønsker dette til å fylle i bed.
+Vi tok med noe flis til elvestien. Blir det store mengder noen steder må vi overlate det til kvist-eier eller de som ønsker dette til å fylle i bed.
 
