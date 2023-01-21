@@ -2,8 +2,8 @@ tittel: Julegrantenning 2022
 ----
 kart:
   - 11.00050
-  - 59.65980
-  - 17.5
+  - 59.65990
+  - 17.8
 ----
 dato: 27. november 2022
 ----
