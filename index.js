@@ -232,6 +232,10 @@ function menuElements (state, emit) {
 }
 
 function pageListing (page) {
+  if (!page) {
+    console.error(page)
+    return null
+  }
   assert.strictEqual(typeof page.tittel, 'string', 'page listing is missing a title')
   assert.strictEqual(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
   var images = Object.keys(page.files).filter(function (file) {
