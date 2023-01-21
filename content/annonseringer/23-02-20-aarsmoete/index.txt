@@ -1,7 +1,6 @@
 tittel: Årsmøte for 2023 blir avholdt på Art To Be. Innledning med presentasjon av elvestien i år.
 ----
-dato: 
-mandag 20. februar 2023, klokken 18:00
+dato: mandag 20. februar 2023, klokken 18:00
 ----
 kart:
   - 11.0008
