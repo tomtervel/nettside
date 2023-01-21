@@ -8,7 +8,7 @@ kart:
   - 18
 ----
 beskrivelse: 
-## Elvesti har gjennomført dugnader i sommer. 
+## Elvesti har gjennomført dugnader denne sommeren. 
 Vi har hatt dugnad 23.05, 06.06. og 20.06
 
 Vi startet klokken 09:30 og holder på så lenge vi ville. Det ble servert enkel mat og vørterøl mellom klokken 11 og 12.
