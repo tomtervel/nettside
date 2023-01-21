@@ -1,5 +1,4 @@
-tittel: 
-Første runde med kvistkverning. Testprosjekt!
+tittel: Første runde med kvistkverning. Testprosjekt!
 ----
 dato: 
 mandag 08. mai 2021, klokken 10–12

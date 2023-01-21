@@ -1,5 +1,4 @@
-tittel: 
-Kvistkverning i 2022.
+tittel: Kvistkverning i 2022
 ----
 dato: 
 ----
