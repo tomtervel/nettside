@@ -1,8 +1,7 @@
-tittel: 
-Årets elvestidugnad.
+tittel: Årets elvestidugnad
 ----
 dato: 
-lørdag 7. mai 2021, fra klokken 10. 
+Lørdag 7. mai 2021, fra klokken 10
 ----
 kart:
   - 11.0008
