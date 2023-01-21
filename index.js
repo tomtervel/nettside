@@ -232,7 +232,7 @@ function menuElements (state, emit) {
 }
 
 function pageListing (page) {
-  if (!page) {
+  if (typeof page.tittel !== 'string') {
     console.error(page)
     return null
   }
