@@ -1,4 +1,4 @@
-tittel: Julegrantenning i 2022
+tittel: Julegrantenningen 2022
 ----
 kart:
   - 11.00050
