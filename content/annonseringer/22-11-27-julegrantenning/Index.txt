@@ -1,0 +1,14 @@
+tittel: Julegrantenning i 2022
+----
+kart:
+  - 11.00050
+  - 59.66000
+  - 18
+----
+dato: 27. november 2022
+----
+beskrivelse:
+Årets julegrantenning manglet snø, men dette ble oppveid av mange fremmøtte og nesten 250 barn fikk godtepose. Lystog med barn gikk fra idrettsplassen til torget, det var sang rundt juletreet og julenissen kom!
+/Users/frikken/Documents/GitHub/nettside/content/annonseringer/22-11-27-julegrantenning/250_godteposer.jpeg
+
+/Users/frikken/Documents/GitHub/nettside/content/annonseringer/22-11-27-julegrantenning/Stort_oppmoete.jpeg
