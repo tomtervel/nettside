@@ -3,7 +3,7 @@ tittel: Julegrantenningen 2022
 kart:
   - 11.00050
   - 59.65900
-  - 17
+  - 17.0
 ----
 dato: 27. november 2022
 ----
