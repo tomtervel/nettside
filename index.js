@@ -134,7 +134,7 @@ function contentView (state, emit) {
         <article class="mw8 ph4-ns ph2 ph5-l pb3 pb5-ns w-100">
           <header class="flex flex-column mb4 mb5-ns cf">
             <div
-              class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1"
+              class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1 mb4"
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
@@ -245,7 +245,7 @@ function pageListing (page) {
   })
   return html`
     <section class="pb3 pb4-ns">
-      <a class="link vel-blue" href=${page.url}>
+      <a class="link vel-blue mb-6" href=${page.url}>
         <h1 class="mb0">${page.tittel}</h1>
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
@@ -256,7 +256,7 @@ function pageListing (page) {
     })
     }</section>
       ${raw(md.render(page.beskrivelse))}
-      <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5"/>
+      <hr class="b--none skew-y bg-vel-blue pt1 w-20 mt5 seperator-sun"/>
     </section> 
   `
 }
