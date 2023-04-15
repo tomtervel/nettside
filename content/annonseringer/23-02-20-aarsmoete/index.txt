@@ -1,4 +1,4 @@
-tittel: Årsmøte for 2023 ble avholdt på Art To Be. Innledning med presentasjon av elvestien for i år.
+tittel: Årsmøte for 2023 på Art-To-Be med siste nytt fra elvestien.
 ----
 dato: mandag 20. februar 2023, klokken 18:00
 ----
@@ -8,7 +8,6 @@ kart:
   - 15
 ----
 beskrivelse:
-### Årsmøte i Tomter vel.
 
 Vi har fått bevilget midler for elvestien og gruppen presenterte årets plan.
 

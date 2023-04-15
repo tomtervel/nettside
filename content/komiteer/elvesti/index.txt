@@ -8,7 +8,6 @@ kart:
 dato: Oppdatert april 2023
 ----
 beskrivelse:
-
 Et prosjekt med stier langs Hobølelva i Tomter som gir folk bedre naturopplevelser og turmuligheter.
 
 ### Innledning

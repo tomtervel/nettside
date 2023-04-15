@@ -153,12 +153,12 @@ function contentView (state, emit) {
           ${page.url === '/'
         ? [
           html`
-              <section rel="komiteer" class="mt4">
+              <section rel="komiteer" class="mt6">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
-                  <h1 class="mv0 bg f5 f3-ns mh2">Vi har komiteer for</h1>
+                  <h2 class="mv0 bg f5 f3-ns mh2">Vi har komiteer for</h2>
                 </div>
-                <ul class="grid gg4 gtc-repeat justify-between items-baseline list pl0 mt4">${
+                <ul class="grid gg4 gtc-repeat justify-between items-stretch list pl0 mv4">${
             state.page('/komiteer').children()
               .sortBy('tittel', 'asc').toArray()
               .filter(page => !page.avsluttet)
@@ -167,7 +167,7 @@ function contentView (state, emit) {
               </section>
               `,
           state.page('/annonseringer').children().toArray().length > 0 ? html`
-              <section rel="annonseringer">
+              <section rel="annonseringer" class="mt6">
                 <div
                   class="dib center pv3 bg-vel-blue ph2 white z-1">
                   <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
@@ -263,11 +263,12 @@ function pageListing (page) {
 
 function frontedContent (page) {
   if (page.avsluttet) return null
+  var newlineIndex = page.beskrivelse.indexOf('.\n')
   return html`
-    <a href=${page.url} class="bg-vel-blue link br3 flex-auto shadow-hover shadow-1">
+    <a href=${page.url} class="bg-vel-blue flex flex-column link br3 shadow-hover shadow-1">
       <h4 class="white pv0 mt3 mb1 mh2 ph2 f4">${page.tittel}</h4>
-      ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white">
-        ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 140) + '…')) : raw(md.render(page.beskrivelse))}
+      ${page.beskrivelse ? html`<div class="db pa2 mh3 br2 black no-underline bg-white flex-auto">
+        ${page.beskrivelse.length > 140 ? raw(md.render(page.beskrivelse.slice(0, 200 < newlineIndex ? 140 : newlineIndex))) : raw(md.render(page.beskrivelse))}
         </div>`
       : null} 
     </a>
