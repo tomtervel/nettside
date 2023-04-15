@@ -132,9 +132,9 @@ function contentView (state, emit) {
     html`
       <main class="w-100 pb5-l pb3 f6 f5-ns f4-l relative flex flex-column items-center bg-animate z-2" id="content">
         <article class="mw8 ph4-ns ph2 ph5-l pb3 pb5-ns w-100">
-          <header class="flex flex-column mb4 mb5-ns cf">
+          <header class="flex flex-column mb5 mb6-ns cf ">
             <div
-              class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1 mb4"
+              class="skew-y origin-top-right w-100 pv3 bg-vel-blue ph2 white z-1"
               style=${page.kart ? 'margin-top: -3rem' : ''}>
               <h1 class="skew-counter origin-top-right w-100 mv0 bg f-1 f-4-ns tc rotate-tiny origin-top-right ">${page.tittel}</h1>
             </div>
