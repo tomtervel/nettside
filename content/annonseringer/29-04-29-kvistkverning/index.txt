@@ -1,0 +1,12 @@
+tittel: Ny runde med kvistkverning. 
+----
+dato: 
+mandag 29. april 2023, klokken 10–12
+----
+kart:
+  - 10.999878854
+  - 59.660244637
+  - 13.5
+----
+beskrivelse:
+Vi rigget opp traktor med kvistkvern og bil med henger. Kjørte først Lyngveien opp og Knatrebakkveien ned. Deretter tok vi en runde i Symreveien og litt opp Tolfshusvein og breegneveien. Vi hadde bare tid og kapasitet til å ta det vi rakk før klokken 13, før vi dro ned til Elvestistarten og avsluttet med å tømme hengeren.
