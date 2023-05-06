@@ -167,19 +167,38 @@ function contentView (state, emit) {
               </section>
               `,
           state.page('/annonseringer').children().toArray().length > 0 ? html`
-              <section rel="annonseringer" class="mt6">
-                <div
-                  class="dib center pv3 bg-vel-blue ph2 white z-1">
-                  <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
-                </div>${state.page('/annonseringer').children().toArray().sort((a,b) => a.name < b.name)
-              .map(pageListing)
-            }</section>` : null
+            <section rel="annonseringer" class="mt6">
+              <div
+                class="dib center pv3 bg-vel-blue ph2 white z-1">
+                <h1 class="mv0 bg f5 f3-ns mh2">Siste Annonseringer</h1>
+              </div>
+              ${state.page('/annonseringer').pages().toArray().sort(sortDates).map(pageListing)}
+            </section>
+          ` : null
         ]
         : state.page().pages().sortBy('url', 'desc').toArray().map(pageListing)}
         </article>
       </main>
     `
   ]
+}
+
+function sortDates(a, b) {
+  try {
+    var adate = a.name.split('-')
+    var bdate = b.name.split('-')
+    var aDate = new Date()
+    aDate.setYear(2000 + Number(adate[0]))
+    aDate.setMonth(Number(adate[1]))
+    aDate.setDate(Number(adate[2]))
+    var bDate = new Date()
+    bDate.setYear(2000 + Number(bdate[0]))
+    bDate.setMonth(Number(bdate[1]))
+    bDate.setDate(Number(bdate[2]))
+    return bDate - aDate
+  } catch (e) {
+    return a.name.localeCompare(b.name)
+  }
 }
 
 function mapView (coords, component) {
