@@ -1,17 +1,15 @@
-tittel: Julegrantenning 2023
+tittel: Julegrantenning 2022
 ----
 kart:
   - 11.00050
   - 59.65990
   - 17.8
 ----
-dato: 3. desember 2023, klokkken 17.
+dato: 27. november 2022
 ----
 beskrivelse:
-For alle små barn så er det mulig å gå i tog fra idrettsplassen. Møt opp klokken 16:30 og fakkeltoget går ned til treet og torget. 
-Treet tennes presis klokken 17:00. Vi ønsker velkommen med at sangere fra BUL-koret synger fire sanger. Så kan barna gå rundt treet med sang. 
+Årets julegrantenning manglet snø, men dette ble oppveid av mange fremmøtte og nesten 250 barn fikk godtepose. Lystog med barn gikk fra idrettsplassen til torget, det var sang rundt juletreet, sveler fra Bygdekvinnelaget til alle og julenissen kom!
 
-Treet er «juletre med mening» fyllt med ønsker, som de to siste år.
-Bygdekvinnelaget stiller med sveler til alle som vil ha.
-Kanskje kommer nissen og deler ut godteposer til barna?
-
+![Torget](/content/annonseringer/22-11-27-julegrantenning/oppmoete.jpg)
+![Julenissen](/content/annonseringer/22-11-27-julegrantenning/nisse.jpg)
+![Svelelag](/content/annonseringer/22-11-27-julegrantenning/svelelag.jpg) 
