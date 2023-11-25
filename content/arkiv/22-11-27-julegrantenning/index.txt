@@ -5,7 +5,7 @@ kart:
   - 59.65990
   - 17.8
 ----
-dato: 3. desember 2023 klokkken 17.
+dato: 3. desember 2023, klokkken 17.
 ----
 beskrivelse:
 For alle små barn så er det mulig å gå i tog fra idrettsplassen. Møt opp klokken 16:30 og fakkeltoget går ned til treet og torget. 
