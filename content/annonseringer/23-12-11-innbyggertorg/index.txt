@@ -8,6 +8,6 @@ kart:
 dato: 23. desember 2023, klokken 18.
 ----
 beskrivelse:
-En begivenhet for Tomter!
+## En begivenhet for Tomter!
 Endelig har kommunen fått opprettet et samlet innbyggertorg. Her er bibliotek, post og frivilligsentral med bod for utleie. Vi gleder oss over dette.
 
