@@ -1,0 +1,13 @@
+tittel: Åpning innbyggertorg i Tomter 2023
+----
+kart:
+  - 10.999507
+  - 59.6613191
+  - 17.8
+----
+dato: 23. desember 2023, klokken 18.
+----
+beskrivelse:
+En begivenhet for Tomter!
+Endelig har kommunen fått opprettet et samlet innbyggertorg. Her er bibliotek, post og frivilligsentral med bod for utleie. Vi gleder oss over dette.
+
