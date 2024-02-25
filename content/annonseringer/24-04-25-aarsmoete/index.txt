@@ -9,8 +9,6 @@ kart:
 ----
 beskrivelse:
 
-### Årsmøte:
-## Årsmøte:
 # Årsmøte:
 Vi starter med selve årsmøtet. Elvesti og årets prosjekt presenteres. Vi tar også opp andre tiltak vi har gjennom året og hvordan disse er organisert. Plukking av fremmede arter kvistkverning, lekeplassene og arrangementene. Frokost på 17. mai og julegrantenning.
 
