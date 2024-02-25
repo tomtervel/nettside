@@ -1,6 +1,6 @@
 tittel: Årsmøte for 2024 på Art-To-Be med siste nytt fra elvestien
 ----
-dato: mandag 25. april 2024, klokken 18:00
+dato: mandag 25. april 2024, klokken 18:30
 ----
 kart:
   - 11.0008
