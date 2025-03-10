@@ -4,7 +4,7 @@ dato: tirsdag 11. mars 2025, klokken 17:00
 ----
 kart:
   - 11.0008
-  - 59.6610
+  - 59.6630
   - 18.7
 ----
 beskrivelse:
