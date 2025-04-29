@@ -1,6 +1,6 @@
 tittel: Første runde med kvistkverning i 2025
 ----
-dato: lørdag 03. mai 2025, klokken 10–13
+dato: lørdag 3. mai 2025, klokken 10–13
 ----
 kart:
   - 10.999878854
@@ -8,6 +8,7 @@ kart:
   - 13.5
 ----
 beskrivelse:
+
 Vi rigger opp traktor med kvistkvern og har med henger. Legg ut kvist langs veien slik at vi ser den når vi kommer. 
 
 Vi kjører først rundt Kringsjå, Lyngveien, Furuveien og Knatrebakkveien ned. Deretter tar vi Engen, opp Tolfshusvein og en runde i Symreveien etterpå.

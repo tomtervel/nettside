@@ -8,6 +8,7 @@ kart:
   - 18.7
 ----
 beskrivelse:
+
 ## Vi møttes på Art To Be klokken 17.
 
 Vi startet med selve årsmøtet. Elvesti og årets prosjekt ble presenteres. Vi tok også opp andre tiltak vi har gjennom året og hvordan disse er organisert. Kvistkverning, lekeplassene og arrangementene. Frokost på 17. mai og julegrantenning.

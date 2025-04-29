@@ -1,16 +1,16 @@
 tittel: 17. maifeiring 2025 🇳🇴
 ----
+dato: Nationaldagen blir feiret med frokost på skolen!
+----
 kart:
   - 11.00262
   - 59.65820
   - 18.7
 ----
-dato: Nationaldagen blir feiret med frokost på skolen!
-----
 beskrivelse:
+
 Tomter Vel og foreldrelaget i Tomter speidergruppe inviterer til
 17. mai - frokost på Tomter skole.
-
 
 Hobøl Skolekorps vil spille til flaggheising på skolegården kl. 08:00 og går deretter
 i tog sammen med speiderne gjennom tomter sentrum og tilbake til skolen.
