@@ -5,10 +5,10 @@ kart:
   - 59.66000000
   - 17
 ----
-dato: Nationaldagen ble feiret med frokost på skolen!
+dato: Nationaldagen blir feiret med frokost på skolen!
 ----
 beskrivelse:
-Tomter Vel og foreldrelaget i Tomter speidergruppe inviterte til
+Tomter Vel og foreldrelaget i Tomter speidergruppe inviterer til
 17. mai - frokost på Tomter skole.
 
 
