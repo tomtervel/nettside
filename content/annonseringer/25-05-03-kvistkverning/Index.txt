@@ -1,7 +1,6 @@
 tittel: Første runde med kvistkverning i 2025
 ----
-dato: 
-lørdag 03. mai 2025, klokken 10–13
+dato: lørdag 03. mai 2025, klokken 10–13
 ----
 kart:
   - 10.999878854
