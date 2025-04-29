@@ -2,8 +2,8 @@ tittel: 17. maifeiring 2025 🇳🇴
 ----
 kart:
   - 11.00262
-  - 59.6582
-  - 17
+  - 59.65820
+  - 18.7
 ----
 dato: Nationaldagen blir feiret med frokost på skolen!
 ----
