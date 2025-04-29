@@ -5,7 +5,7 @@ dato: Nationaldagen blir feiret med frokost på skolen!
 kart:
   - 11.00262
   - 59.65820
-  - 18.7
+  - 17
 ----
 beskrivelse:
 
