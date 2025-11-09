@@ -269,13 +269,13 @@ function pageListing (page) {
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null}
-      <section class="flex flex-wrap items-center" rel="images">${
+      <section class="flex flex-wrap items-center empty-hidden" rel="images">${
     images.map(function (image) {
       return html`<img class="object-contain" src=${image.path} />`
     })
     }</section>
       ${raw(md.render(page.beskrivelse))}
-      <hr align="right" class="b--none skew-y bg-vel-blue pt1 w-20 mt5 seperator-sun"/>
+      <hr align="right" class="b--none skew-y bg-vel-blue pt1 w-60 mt5 seperator-sun"/>
     </section> 
   `
 }
