@@ -1,4 +1,4 @@
-tittel: Velkommen til Tomter vels nettside!
+tittel: For Tomters ve og vel!
 ----
 kart:
   - 11
