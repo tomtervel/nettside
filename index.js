@@ -275,7 +275,7 @@ function pageListing (page) {
     })
     }</section>
       ${raw(md.render(page.beskrivelse))}
-      <hr align="right" class="b--none skew-y bg-light-gray pt1 w-33 mt5 seperator-sun"/>
+      <hr align="right" class="b--none skew-y bg-desaturated-yellow  pt1 w-33 mt5 seperator-sun"/>
     </section> 
   `
 }

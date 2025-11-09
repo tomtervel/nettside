@@ -117,3 +117,6 @@ img + img {
 .empty-hidden {
   display: none;
 }
+.bg-desaturated-washed-yellow {
+	background-color: color-mix(in lab, #fffceb, gray);
+}
