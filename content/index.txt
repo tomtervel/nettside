@@ -6,7 +6,6 @@ kart:
   - 13.5
 ----
 beskrivelse:
-Følg lenke til enkeltsaker for tilgang til filer.
 ----
 footer:
 ### Bidrag er ønskelig! Vil du delta i komitéer eller styrearbeide så gi oss et hint.

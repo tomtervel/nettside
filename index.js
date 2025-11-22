@@ -114,12 +114,12 @@ function contentView (state, emit) {
   var page = state.page().value()
   if (Object.keys(page).length === 0) return fourOhFour()
   var downloads = Object.keys(page.files).filter(function (file) {
-    return !file.match('.jpg')
+    return !file.match('.jpg') || !file.includes('cover.png')
   }).map(function (file) {
     return page.files[file]
   })
   var coverImages = Object.keys(page.files).filter(function (file) {
-    return file.includes('cover.jpg')
+    return file.includes('cover.jpg') || file.includes('.png')
   }).map(function (file) {
     return page.files[file]
   })
@@ -258,7 +258,12 @@ function pageListing (page) {
   assert.strictEqual(typeof page.tittel, 'string', 'page listing is missing a title')
   assert.strictEqual(typeof page.beskrivelse, 'string', `page ${page.tittel} is missing a description`)
   var images = Object.keys(page.files).filter(function (file) {
-    return file.includes('cover.jpg')
+    return file.includes('cover.jpg') || file.includes('cover.png')
+  }).map(function (file) {
+    return page.files[file]
+  })
+  var downloads = Object.keys(page.files).filter(function (file) {
+    return !file.match('.jpg') || !file.includes('.png')
   }).map(function (file) {
     return page.files[file]
   })
@@ -269,6 +274,9 @@ function pageListing (page) {
       </a>
       ${page.dato ? html`<h5>${page.dato}</h5>` : null}
       ${page.avsluttet ? html`<h5>Avsluttet ${page.avsluttet}</h5>` : null}
+      <section class=${downloads.length ? 'mv4 flex flex-wrap' : 'dn'} rel="files">
+        ${downloads.map(fileDownload)}
+      </section>
       <section class="flex flex-wrap items-center empty-hidden" rel="images">${
     images.map(function (image) {
       return html`<img class="object-contain" src=${image.path} />`
