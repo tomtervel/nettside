@@ -3,7 +3,7 @@ tittel: Julegrantenning i Tomter sentrum
 kart:
   - 11.00060713
   - 59.65983272
-  - 18.5
+  - 19
 ----
 dato: Søndag 30. november kl. 17:00
 ----
