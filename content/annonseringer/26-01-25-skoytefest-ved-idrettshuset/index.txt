@@ -3,7 +3,7 @@ tittel: Skøyteis på idrettsplassen
 kart:
   - 10.9992019
   - 59.6666285
-  - 17
+  - 16
 ----
 dato: Søndag 25. januar kl. 12:00
 ----
