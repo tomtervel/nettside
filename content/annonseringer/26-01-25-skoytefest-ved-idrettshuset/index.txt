@@ -3,13 +3,13 @@ tittel: Skøyteis på idrettsplassen
 kart:
   - 10.9992019
   - 59.6666285
-  - 11
+  - 18
 ----
 dato: Søndag 25. januar kl. 12:00
 ----
 beskrivelse:
 ## Vinteren er her!
-Det er skøyteis på banen og vi serverer ertesuppe med pølser og kakao til barna. 
+Det er skøyteis på banen og vi serverer ertesuppe med pølser og kakao til barna.
 
 ## Hjertelig velkommen til store og små!
-![illustrasjon](/content/annonseringer/26-01.25-skoytefest-ved-idrettshuset/lek-på-isen.jpg)
+![illustrasjon](/content/annonseringer/26-01-25-skoytefest-ved-idrettshuset/lek-paa-isen.jpg)
