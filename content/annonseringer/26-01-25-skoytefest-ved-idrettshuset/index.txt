@@ -8,7 +8,8 @@ kart:
 dato: Søndag 25. januar kl. 12:00
 ----
 beskrivelse:
-## Vinteren er her!
+### Vinteren er her!
+
 Det er skøyteis på banen og vi serverer ertesuppe med pølser og kakao til barna.
 
-## Hjertelig velkommen til store og små!
+### Hjertelig velkommen til store og små!
