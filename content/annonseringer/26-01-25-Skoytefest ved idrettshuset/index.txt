@@ -1,0 +1,15 @@
+tittel: Skøyteis på idrettsplassen
+----
+kart:
+  - 612566.36,
+  - 6616021.26
+  - 11
+----
+dato: Søndag 25. januar kl. 12:00
+----
+beskrivelse:
+## Vinteren er her!
+Det er skøyteis på banen og vi serverer ertesuppe med pølser og kakao til barna. 
+
+## Hjertelig velkommen til store og små!
+![plakat](/content/annonseringer/26-01.25-Skoytefest ved idrettshuset/Plakat skoyter.pdf)
