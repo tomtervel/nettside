@@ -5,8 +5,7 @@ kart:
   - 59.6666285
   - 16
 ----
-dato: Søndag 25. januar kl. 12:00
-Lørag 7. februar og lørdag 14. februar på samme tid
+dato: Søndag 25. januar kl. 12:00, lørag 7. februar og lørdag 14. februar på samme tid.
 ----
 beskrivelse:
 ### Vinteren er her!
@@ -14,4 +13,4 @@ beskrivelse:
 Det er skøyteis på banen og vi serverer ertesuppe med pølser og kakao til barna.
 
 ### Hjertelig velkommen til store og små!
-Vi kommer tilbake flere dager denne vinteren. Vi koordinerer med idrettsforeningen og kommer tilbake med dager.
+Vi kommer tilbake flere dager denne vinteren. Vi koordinerer med idrettsforeningen og kommer tilbake med dager. Nå sponser Kiwi oss med maten!
