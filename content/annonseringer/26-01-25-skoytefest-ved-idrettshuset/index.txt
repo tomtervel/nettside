@@ -5,7 +5,9 @@ kart:
   - 59.6666285
   - 16
 ----
-dato: Søndag 25. januar kl. 12:00, lørag 7. februar og lørdag 14. februar på samme tid.
+dato: Søndag 25. januar kl. 12:00,
+lørag 7. februar og
+lørdag 14. februar på samme tid.
 ----
 beskrivelse:
 ### Vinteren er her!
