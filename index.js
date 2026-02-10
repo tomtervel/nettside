@@ -114,12 +114,13 @@ function contentView (state, emit) {
   var page = state.page().value()
   if (Object.keys(page).length === 0) return fourOhFour()
   var downloads = Object.keys(page.files).filter(function (file) {
-    return !file.match('.jpg') || !file.includes('cover.png')
+    return !file.includes('.jpg') && !file.includes('.png')
   }).map(function (file) {
     return page.files[file]
   })
   var coverImages = Object.keys(page.files).filter(function (file) {
-    return file.includes('cover.jpg') || file.includes('.png')
+    console.log(file)
+    return file.includes('cover.jpg') || file.includes('cover.png')
   }).map(function (file) {
     return page.files[file]
   })
@@ -263,7 +264,7 @@ function pageListing (page) {
     return page.files[file]
   })
   var downloads = Object.keys(page.files).filter(function (file) {
-    return !file.match('.jpg') || !file.includes('.png')
+    return !file.includes('.jpg') && !file.includes('.png')
   }).map(function (file) {
     return page.files[file]
   })
