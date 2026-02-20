@@ -86,7 +86,7 @@ Styret i Tomter Vel**
 | *Sum* | **75 235** |
 
 | *Driftsresultat* | **24 765** |
-
+| :--- | ---: |
 | Opparbeide og utvide gangvei Elvestien | 280 000 |
 | Tomter Vel bidrag Elvestien 2026 | 280 000 |
 | Fra driftsresultat 2026 | 24 765 |
