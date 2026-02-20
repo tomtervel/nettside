@@ -63,7 +63,7 @@ Vi har et eget nettsted, dette her, som presenterer viktige hendelser gjennom å
 
 **Tomter, 29. januar 2026<br/>
 Styret i Tomter Vel**
-----
+
 #  budsjett for 2026
 
 | Inntekter | Kroner |
@@ -86,7 +86,6 @@ Styret i Tomter Vel**
 | *Sum* | **75 235** |
 
 | *Driftsresultat* | **24 765** |
-
 
 | Opparbeide og utvide gangvei Elvestien | 280 000 |
 | Tomter Vel bidrag Elvestien 2026 | 280 000 |
