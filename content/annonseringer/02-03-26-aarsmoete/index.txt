@@ -64,4 +64,31 @@ Vi har et eget nettsted, dette her, som presenterer viktige hendelser gjennom å
 **Tomter, 29. januar 2026<br/>
 Styret i Tomter Vel**
 ----
-#  budsjett for 2026 kommer snart
+#  budsjett for 2026
+
+| Inntekter | Kroner |
+| :--- | ---: |
+| Grasrot| 30 000 |
+| Kontingent (250 kroner x 180 betalende medlemmer) | 45 000 |
+| MVA kompensasjon | 13 000 |
+| Renteinntekter | 12 000 |
+| *Sum* | **100 000** |
+
+| Utgift | Kroner |
+| :--- | ---: |
+| Julegrantenning | 11 000 |
+| 17. mai | 6 000 |
+| Lekeplass vedlikehold og kontroll | 7 000 |
+| Vedlikehold og drift Elvestien | 15 000 |
+| Støtte andre foreninger | 4 000 |
+| Foreningsdrift | 5 000 |
+| Avskrivning utstyr | 27 235 |
+| *Sum* | **75 235** |
+
+| *Driftsresultat* | **24 765** |
+
+
+| Opparbeide og utvide gangvei Elvestien | 280 000 |
+| Tomter Vel bidrag Elvestien 2026 | 280 000 |
+| Fra driftsresultat 2026 | 24 765 |
+| Fra Tomter Vel opptjent kapital | 255 235 |
