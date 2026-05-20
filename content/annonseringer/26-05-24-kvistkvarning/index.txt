@@ -1,8 +1,8 @@
 tittel: Kvistkværning våren 2026
 ----
 kart:
-  - 11,001343
-  - 59,663797 
+  - 11.001343
+  - 59.663797 
   - 17.8
 ----
 dato: 30. mai, klokken 10–12.
